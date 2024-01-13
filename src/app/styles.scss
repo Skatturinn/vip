@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+$bccolor: #0F0E16;
+$active-color: #F0386B;
+// $active-color: #DB0053;
+
+$hvitur: #fff;
+
+:root {
+	--active-c: #F0386B;
+}
+
+body {
+	margin: 0.75% auto;
+	width: 95%;
+	background-color: $bccolor;
+	color: $hvitur;
+	display: grid;
+	grid-template-areas: "h"
+		"b"
+		"f";
+
+	header {
+		grid-area: "h";
+	}
+
+	main {
+		grid-area: "b";
+		width: 100%;
+		display: flex;
+	}
+
+	footer {
+		grid-area: "f";
+	}
+}
+
+a,
+button {
+	font-family: inherit;
+	text-decoration: none;
+	font-weight: 100;
+	color: inherit;
+}
+
+ul {
+	font-family: inherit;
+	list-style: none;
+}
+
+.active {
+	color: $active-color;
+	// opacity: unset;
+	text-transform: capitalize;
+	font-weight: 400;
+	opacity: 1;
+	// border-bottom: 1px $hvitur solid;
+}

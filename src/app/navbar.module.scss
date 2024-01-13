@@ -1,0 +1,70 @@
+.navGrid {
+	display: grid;
+	grid-template-columns: repeat(11, minmax(0, 1fr));
+	gap: 128px;
+	text-transform: lowercase;
+	font-size: 26px;
+	opacity: 100%;
+	transition: opacity 0.5s ease;
+
+	:nth-child(even) {
+		align-self: center;
+		opacity: 75%;
+	}
+
+	:nth-child(2) {
+		justify-self: end;
+		grid-column-start: 5;
+
+	}
+
+	:nth-child(3) {
+		justify-self: center;
+		opacity: 75%;
+	}
+
+	:nth-child(5) {
+		justify-self: end;
+		grid-column-start: 9;
+		grid-column-end: span 3;
+		align-self: center;
+	}
+
+	&:has(li:hover) li:not(:hover) {
+		opacity: 0.2;
+		transition: opacity 0.75s ease-in-out;
+	}
+
+	li {
+		transition: opacity 1s ease-in-out;
+	}
+}
+
+.logoHomeNav {
+	opacity: 55%;
+
+	&__fixed {
+		position: fixed;
+		opacity: 55%;
+		animation-name: fadein;
+		animation-duration: 0.5s;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0%;
+	}
+
+	20% {
+		opacity: 10%;
+	}
+
+	95% {
+		opacity: 56%;
+	}
+
+	100% {
+		opacity: 55%;
+	}
+}
