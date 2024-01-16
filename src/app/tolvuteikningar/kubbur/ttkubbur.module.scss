@@ -1,0 +1,38 @@
+.teikningasett {
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+
+	:nth-child(1) {
+		border-top: 0;
+	}
+
+
+
+	li {
+		text-align: center;
+		align-self: center;
+		justify-self: center;
+		// overflow: hidden;
+		border-top: 1px white solid;
+		border-bottom: 1px white solid;
+		// margin: 1em 0;
+		border-radius: 1em;
+		width: fit-content;
+		height: fit-content;
+		max-width: 100%;
+		max-height: 100%;
+
+		.teikning {
+			max-width: 100%;
+			max-height: 100%;
+			width: fit-content;
+			height: fit-content;
+			object-fit: scale-down;
+			object-position: center;
+			// margin: 0 auto;
+			align-self: center;
+			justify-self: center;
+		}
+	}
+}

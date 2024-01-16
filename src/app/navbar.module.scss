@@ -1,11 +1,14 @@
+$bccolor: #0F0E16;
+
 .navGrid {
 	display: grid;
 	grid-template-columns: repeat(11, minmax(0, 1fr));
-	gap: 128px;
+	gap: 0 128px;
 	text-transform: lowercase;
 	font-size: 26px;
 	opacity: 100%;
 	transition: opacity 0.5s ease;
+	// height: 52px;
 
 	:nth-child(even) {
 		align-self: center;
@@ -21,6 +24,11 @@
 	:nth-child(3) {
 		justify-self: center;
 		opacity: 75%;
+		grid-column-start: 6;
+	}
+
+	:nth-child(4) {
+		grid-column-start: 7;
 	}
 
 	:nth-child(5) {
@@ -28,6 +36,15 @@
 		grid-column-start: 9;
 		grid-column-end: span 3;
 		align-self: center;
+
+		strong {
+			font-weight: 400;
+		}
+	}
+
+	:nth-child(6) {
+		position: absolute;
+		justify-self: end;
 	}
 
 	&:has(li:hover) li:not(:hover) {
@@ -37,6 +54,11 @@
 
 	li {
 		transition: opacity 1s ease-in-out;
+
+		&:hover {
+			opacity: 100%;
+			transition: opacity 1s ease-in-out;
+		}
 	}
 }
 
@@ -49,6 +71,35 @@
 		animation-name: fadein;
 		animation-duration: 0.5s;
 	}
+}
+
+.valmyndNav {
+	display: inline;
+	background-color: transparent;
+	// position: absolute;
+	justify-self: end;
+	grid-column-start: 20;
+	border: 0;
+	position: fixed;
+	transition: opacity 1s ease-in-out;
+
+	&:hover {
+		transition: opacity 1s ease-in-out;
+		cursor: pointer;
+	}
+
+	&__off {
+		display: none;
+	}
+}
+
+.navSticky {
+	margin: -1em 0 0 0;
+	padding: 1em 0;
+	width: 95%;
+	position: fixed;
+	z-index: 10000;
+	background: -webkit-linear-gradient($bccolor, transparent);
 }
 
 @keyframes fadein {

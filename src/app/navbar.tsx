@@ -20,39 +20,69 @@ function FixedHomeNav() {
 		window.addEventListener('scroll', scrollHeader)
 
 		return () => {
-			window.addEventListener('scroll', scrollHeader)
+			window.removeEventListener('scroll', scrollHeader)
 		}
 	})
 
 	return header
 }
 
+let s = 0;
+
+function ReturnHomeNav() {
+	const [menu, setMenu] = useState(false);
+	const reveal = () => {
+		const ns = scrollY;
+		if (ns > 30 && s > ns) {
+			setMenu(true)
+		} else {
+			setMenu(false)
+		}
+		s = ns;
+	}
+	useEffect(() => {
+		// let s = 0;
+		window.addEventListener('scroll', reveal)
+		return () => {
+			window.removeEventListener('scroll', reveal)
+		}
+	})
+	return menu
+}
+
 
 export function NavBar() {
-	const h = FixedHomeNav()
+	const h = FixedHomeNav();
+	const m = ReturnHomeNav();
 
-	const pathname = usePathname()
+	const pathname = usePathname();
 	const isCurrent = (href: string): string => {
-		return pathname == href ? "active" : ""
+		return pathname.split('/').map(el => '/' + el).includes(href) ? "active" : ""
 	}
 	return <header>
 		<nav>
-			<ul className={styles.navGrid}>
+			<ul className={`${styles.navGrid} ${m && h ? styles.navSticky : ''}`}>
 				<li>
 					<Link href="/">
 						<Image
 							src="/logosvgwhite.svg"
-							alt="Elli.vip logo"
+							alt="Elías Lúðviksson/Elli.vip logo"
 							width="32"
 							height="52"
 							className={h ? styles.logoHomeNav__fixed : styles.logoHomeNav}
-						></Image>
+						/>
 					</Link></li>
-				<li><Link href='/verkefni' className={isCurrent('/verkefni')}>Verkefni</Link></li>
-				<li><Link href='/tolvuteikningar' className={isCurrent('/tolvuteikningar')}>Tölvuteikningar</Link></li>
-				<li><Link href='/myndbond' className={isCurrent('/myndbond')}>Myndbönd</Link></li>
-				<li><Link href='/contact' className={isCurrent('/contact')}><strong>Hafðu samband</strong></Link></li>
+				<li className={isCurrent('/verkefni')}><Link href='/verkefni'>Verkefni</Link></li>
+				<li className={isCurrent('/tolvuteikningar')}><Link href='/tolvuteikningar'> Tölvuteikningar</Link></li>
+				<li className={isCurrent('/myndbond')}><Link href='/myndbond'>Myndbönd</Link></li>
+				<li className={isCurrent('/contact')}><Link href='/contact'><strong>Hafðu samband</strong></Link></li>
+				<li><button className={styles.valmyndNav__off}><Image src="/valmynd.svg"
+					alt="Valmynd"
+					width={50}
+					height={50}
+				/>
+				</button></li>
 			</ul>
 		</nav>
-	</header>
+	</header >
 } 

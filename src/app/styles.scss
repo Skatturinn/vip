@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	min-width: 0;
 }
 
 $bccolor: #0F0E16;
@@ -12,10 +13,11 @@ $hvitur: #fff;
 
 :root {
 	--active-c: #F0386B;
+	--bccolor: #0F0E16;
 }
 
 body {
-	margin: 0.75% auto;
+	margin: 1em auto;
 	width: 95%;
 	background-color: $bccolor;
 	color: $hvitur;
@@ -23,6 +25,7 @@ body {
 	grid-template-areas: "h"
 		"b"
 		"f";
+	grid-template-rows: 100px auto auto;
 
 	header {
 		grid-area: "h";
@@ -32,6 +35,8 @@ body {
 		grid-area: "b";
 		width: 100%;
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	footer {
@@ -47,16 +52,52 @@ button {
 	color: inherit;
 }
 
-ul {
+ul,
+ol {
 	font-family: inherit;
 	list-style: none;
 }
 
 .active {
-	color: $active-color;
+
+	// color: $active-color;
 	// opacity: unset;
-	text-transform: capitalize;
-	font-weight: 400;
-	opacity: 1;
-	// border-bottom: 1px $hvitur solid;
+	// font-size: 70px;
+	animation-name: appear;
+	animation-duration: 0.1s;
+	grid-row-start: 2;
+	grid-column-start: 1 !important;
+	align-self: center;
+	justify-self: center !important;
+	text-align: center;
+	grid-column-end: span 11 !important;
+	opacity: 1 !important;
+
+	// grid-column-end: span 3;
+
+	// box-shadow: #F9FBE9;
+	a {
+		text-transform: capitalize;
+		font-weight: 400;
+		// border-bottom: 1px #F9FBE9 solid;
+		// border-radius: 0.2em;
+		background: -webkit-linear-gradient($hvitur, #F6F7EB, #F9FBE9);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+@keyframes appear {
+	0% {
+		scale: 0;
+	}
+
+	100% {
+		scale: 1;
+	}
 }
