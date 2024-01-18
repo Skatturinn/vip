@@ -1,54 +1,23 @@
 import { NavBar } from "../../navbar"
 import Image from "next/image";
 import styles from "./ttkubbur.module.scss";
-import { CardLayout } from "@/app/cardnavigation";
+import { ThreeDteikningar } from "./kubburthreejs";
+import { Metadata } from "next";
+import Link from "next/link";
+export const metadata: Metadata = {
+	title: "Elías Lúðvíksson kubbur",
+	description: "Málsetningar á kubba samsetningu ásamt þrívíddar líkönum af samsetningu og íhlutum - Elias Ludviksson / Elli.vip",
+};
 
 export default function Page() {
-	return <><NavBar />
-		<main>
-			{/* <CardLayout /> */}
-			<ol className={styles.teikningasett}>
-				<li>
-					<Image
-						src="/tolvuteikningar_myndir/kubbur/kubbur.png"
-						alt="Mynd sem sýnir samsetningu kubbs"
-						width="2298" height="1498"
-						className={styles.teikning}
-					/>
-				</li>
-				<li>
-					<Image
-						src="/tolvuteikningar_myndir/kubbur/festing.png"
-						alt="Mynd sem sýnir málsetningar miðju festingar kubbsins sem heldur öllum hliðunum saman."
-						width="2298" height="1498"
-						className={styles.teikning}
-					/>
-				</li>
-				<li>
-					<Image
-						src="/tolvuteikningar_myndir/kubbur/midja.png"
-						alt="Mynd sem sýnir málsetningar midju kubb hliðar samsetningu kubbsins"
-						width="2298" height="1498"
-						className={styles.teikning}
-					/>
-				</li>
-				<li>
-					<Image
-						src="/tolvuteikningar_myndir/kubbur/hlid.png"
-						alt="Mynd sem sýnir málsetningar hliðar kubbsins úr samsetningu hliðar kubbsins"
-						width="2298" height="1498"
-						className={styles.teikning}
-					/>
-				</li>
-				<li>
-					<Image
-						src="/tolvuteikningar_myndir/kubbur/horn.png"
-						alt="Mynd sem sýnir málsetningar horn kubbsins úr samsetningu hliðar kubbsins"
-						width="2298" height="1498"
-						className={styles.teikning}
-					/>
-				</li>
-			</ol>
-		</main>
+	return <>
+		<h1>Kubbur</h1>
+		<p>Allar málsetningar eru í mm</p>
+		<ol className={styles.teikningasett}>
+			<ThreeDteikningar samsetning={'kubbur'} listi={['kubbur', 'festing', 'midja', 'horn', 'hlid']} />
+		</ol>
+		<Link
+			href="/files/Teikningasett-kubbs-RemasteredJan2024.pdf">Skoða pdf</Link>
+
 	</>
 }

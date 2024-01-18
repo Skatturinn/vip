@@ -2,23 +2,55 @@ $ivory: #f6f7ebff;
 
 .forsidumynd {
 	padding: 0 0 0 10em;
-	margin: 5em auto;
+	margin: 5em 0 15em;
 	scale: 0.9;
 	animation-name: fadein;
 	animation-duration: 1s;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: auto;
 
-	.krot {
-		position: absolute;
-		// align-self: center;
+	// justify-content: center;
+	// justify-items: center;
+	// object-fit: scale-down;
+	// overflow: hidden;
+	:nth-child(1) {
+		width: max-content;
+		justify-self: center;
+		// overflow: hidden;
+		grid-row: 1;
+		grid-column-start: 1;
+		grid-column-end: span 3;
+		object-fit: cover;
+		object-position: center;
 	}
+
+	:nth-child(2) {
+		scale: 1.1;
+		grid-row: 1;
+		grid-column-start: 1;
+		grid-column-end: span 3;
+		translate: -10px 125px;
+		// position: absolute;
+		align-self: flex-end;
+		justify-self: center;
+	}
+
+	// .krot {
+	// 	translate: 0 100px;
+	// 	// position: absolute;
+	// 	align-self: flex-end;
+	// 	justify-self: center;
+	// 	// align-self: center;
+	// }
 }
 
 .cardContainer {
 	// box-sizing: content-box;
-	margin: 350px 0;
+	margin: 5em 0;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 75px;
+	gap: 0 2.5%;
 	justify-items: center;
 	// max-width: 1300px;
 

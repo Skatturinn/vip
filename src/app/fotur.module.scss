@@ -1,0 +1,17 @@
+.fotur {
+	margin: auto auto 0;
+	text-align: center;
+	padding: 15em 0;
+
+	&__mynd {
+		object-fit: cover;
+		object-position: center;
+		height: 20vw;
+		width: 20vw;
+		// text-align: center;
+	}
+
+	&__caption {
+		text-align: center;
+	}
+}

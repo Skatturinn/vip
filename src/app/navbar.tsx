@@ -50,6 +50,22 @@ function ReturnHomeNav() {
 	return menu
 }
 
+function ValmyndNavToggle() {
+	const [val, setVal] = useState(false);
+	const check = () => {
+		if (window.screen.width <= 1349) {
+			setVal(true)
+		} else {
+			setVal(false)
+		}
+	}
+	useEffect(() => {
+		addEventListener("resize", check);
+		check()
+	})
+	return val
+}
+// console.log(ValmyndNavToggle())
 
 export function NavBar() {
 	const h = FixedHomeNav();
@@ -76,7 +92,7 @@ export function NavBar() {
 				<li className={isCurrent('/tolvuteikningar')}><Link href='/tolvuteikningar'> Tölvuteikningar</Link></li>
 				<li className={isCurrent('/myndbond')}><Link href='/myndbond'>Myndbönd</Link></li>
 				<li className={isCurrent('/contact')}><Link href='/contact'><strong>Hafðu samband</strong></Link></li>
-				<li><button className={styles.valmyndNav__off}><Image src="/valmynd.svg"
+				<li><button className={styles.valmyndNav}><Image src="/valmynd.svg"
 					alt="Valmynd"
 					width={50}
 					height={50}

@@ -2,9 +2,20 @@ import type { Metadata } from "next";
 import "./styles.scss";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
+import { NavBar } from "./navbar";
+import { Fotur } from "./fotur";
+
 export const metadata: Metadata = {
 	title: "Elías Lúðvíksson",
 	description: "Elias Ludviksson / Elli.vip",
+	authors: { name: 'Elías Lúðvíksson', url: '' },
+	// openGraph: {
+	// 	locale: 'is',
+	// 	title: 'Heimasíða Elíasar Lúðvíkssonar',
+	// 	type: 'website',
+	// 	siteName: 'Elías Lúðvíksson',
+	// 	description: 'Síða sem ég byggði í þeim tilgangi að sýna færni á sviði vefforitunar. Hún hýsir einnig verkefni sem ég hef unnið á öðrum sviðum til sýnis.',
+	// }
 };
 
 export const poppins = Poppins({
@@ -22,7 +33,11 @@ export default function RootLayout({
 			<Head>
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
-			<body className={poppins.className}>{children}</body>
+			<body className={poppins.className}>
+				<NavBar />
+				<main>{children}</main>
+				<Fotur />
+			</body>
 		</html>
 	);
 }

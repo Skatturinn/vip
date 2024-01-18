@@ -7,8 +7,6 @@
 
 $bccolor: #0F0E16;
 $active-color: #F0386B;
-// $active-color: #DB0053;
-
 $hvitur: #fff;
 
 :root {
@@ -17,8 +15,9 @@ $hvitur: #fff;
 }
 
 body {
+	min-height: 100vw;
 	margin: 1em auto;
-	width: 95%;
+	width: 100%;
 	background-color: $bccolor;
 	color: $hvitur;
 	display: grid;
@@ -29,18 +28,21 @@ body {
 
 	header {
 		grid-area: "h";
+
+		nav {
+			width: 100%;
+			margin: 0 auto;
+		}
 	}
 
 	main {
+		margin: 0 auto;
 		grid-area: "b";
-		width: 100%;
+		width: 95%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-
-	footer {
-		grid-area: "f";
+		// min-height: 100vh;
 	}
 }
 
@@ -58,6 +60,18 @@ ol {
 	list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	background: -webkit-linear-gradient(#fff, #F6F7EB, #F9FBE9);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .active {
 
 	// color: $active-color;
@@ -65,11 +79,12 @@ ol {
 	// font-size: 70px;
 	animation-name: appear;
 	animation-duration: 0.1s;
-	grid-row-start: 2;
+	grid-row-start: 2 !important;
 	grid-column-start: 1 !important;
 	align-self: center;
 	justify-self: center !important;
 	text-align: center;
+	grid-column-start: 1;
 	grid-column-end: span 11 !important;
 	opacity: 1 !important;
 
@@ -81,7 +96,7 @@ ol {
 		font-weight: 400;
 		// border-bottom: 1px #F9FBE9 solid;
 		// border-radius: 0.2em;
-		background: -webkit-linear-gradient($hvitur, #F6F7EB, #F9FBE9);
+		background: -webkit-linear-gradient(white, #F6F7EB, #F9FBE9);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
