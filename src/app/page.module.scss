@@ -31,3 +31,13 @@ $ivory: #f6f7ebff;
 		justify-self: center;
 	}
 }
+
+@keyframes fadein {
+	0% {
+		opacity: 0%;
+	}
+
+	100% {
+		opacity: 100%;
+	}
+}
