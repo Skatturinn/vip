@@ -34,8 +34,9 @@ export default function RootLayout({
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
 			<body className={poppins.className}>
+				<a href="#efni" className="sr-only">Tæknibúðin,Beint í efnið.</a>
 				<NavBar />
-				<main>{children}</main>
+				<main id="efni">{children}</main>
 				<Fotur />
 			</body>
 		</html>

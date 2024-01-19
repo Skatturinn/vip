@@ -1,48 +1,76 @@
 'use client'
+import { FC } from 'react';
 import { FormEvent, useState } from "react"
+import { useForm } from "react-hook-form";
+import { messagevalidationmiddleware } from '../util/validation';
+import styles from "./form.module.scss"
 
-export const ContactForm = () => {
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
-
-	const onSubmit = async (e: FormEvent) => {
-		e.preventDefault()
-		console.log(name, email, message)
+export type FormData = {
+	name: string;
+	email: string;
+	message: string;
+};
+export const ContactForm: FC = () => {
+	const { register, handleSubmit } = useForm<FormData>();
+	const [wait, setWait] = useState(false);
+	async function onSubmit(data: FormData) {
 		try {
-			const res = await fetch('/api/contact', {
-				method: 'POST',
-				body: JSON.stringify({
-					name: name, email: email, message: message
-				}),
-				headers: {
-					'content-type': 'application/json'
+			const a = messagevalidationmiddleware(data.name, data.email, data.message);
+			if (a) {
+				try {
+					setWait(true)
+					const res = await fetch('/api/contact', {
+						method: 'POST',
+						body: JSON.stringify({
+							a
+						}),
+						headers: {
+							'content-type': 'application/json'
+						}
+					})
+					setWait(false)
+					if (res.status === 400) {
+						throw new Error(res.statusText)
+					} else if (res.status >= 200 && res.status < 300) {
+						window.alert('Skilaboð mótekin')
+						window.history.pushState({}, '', '/');
+						window.history.go();
+					}
+
+				} catch (err) {
+					window.alert(err)
 				}
-			})
-
-		} catch (err: any) {
-			console.log(err)
-			console.error(err)
-
-		}
+			}
+		} catch (err) { window.alert(err) }
 	}
-
 	return <>
-		<form onSubmit={onSubmit}>
-			<input
-				value={name}
-				onChange={(e) => setName(e.target.value)}
-				type="text"
-				placeholder="name"
-			/>
-			<input
-				value={email}
-				onChange={(e) => setEmail(e.target.value)}
-				type="text" placeholder="email" />
-			<textarea
-				value={message}
-				onChange={e => setMessage(e.target.value)}
-			></textarea>
-			<button>Press me</button>
+		<div className={wait ? styles.loading : ''}></div>
+		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+			<div className={styles.field}>
+				<label
+					htmlFor='name' >nafn</label>
+				<input
+					type="text"
+					placeholder=""
+					{...register('name', { required: true })}
+				/>
+			</div>
+			<div className={styles.field}>
+				<label
+					htmlFor='email'>netfang</label>
+				<input
+					type="text" placeholder=""
+					{...register('email', { required: true })}
+				/>
+			</div>
+			<div className={styles.field}>
+				<label
+					htmlFor='message' >Athugassemd</label>
+				<textarea
+					placeholder=""
+					{...register('message', { required: true })}
+				></textarea>
+			</div>
+			<button className={styles.button}>Senda skilaboð</button>
 		</form></>
 }

@@ -5,12 +5,20 @@
 	min-width: 0;
 }
 
+.sr-only:not(:focus, :active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: var(--border-size);
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: var(--border-size);
+}
+
 $bccolor: #0F0E16;
-$active-color: #F0386B;
 $hvitur: #fff;
 
 :root {
-	--active-c: #F0386B;
 	--bccolor: #0F0E16;
 }
 
