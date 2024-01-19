@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { NavBar } from "../navbar"
 import { CardLayout } from "../cardnavigation";
+import { ContactForm } from "./form";
 
 
 export const metadata: Metadata = {
@@ -9,5 +10,6 @@ export const metadata: Metadata = {
 };
 export default function Page() {
 	return <>
+		<ContactForm />
 	</>
 }

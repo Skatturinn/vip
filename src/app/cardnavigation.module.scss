@@ -1,0 +1,150 @@
+$ivory: #f6f7ebff;
+
+.cardContainer {
+	// box-sizing: content-box;
+	margin: 5em 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0 2.5%;
+	justify-items: center;
+	width: 100%;
+	// max-width: 1300px;
+
+	:nth-child(1) {
+		grid-column-start: 2;
+		grid-column-end: span 2;
+		justify-self: center;
+	}
+
+	:nth-child(2) {
+		grid-column-start: 2;
+	}
+
+	:nth-child(4) {
+		grid-column-start: 1;
+		grid-column-end: span 2;
+		grid-row: 3;
+	}
+
+	:nth-child(5) {
+		grid-row: 3;
+		grid-column-start: 2;
+		grid-column-end: span 2;
+	}
+
+	:nth-child(6) {
+		grid-row: 3;
+		grid-column-start: 3;
+		grid-column-end: span 2;
+	}
+
+	:hover,
+	:active,
+	:focus {
+		z-index: 100;
+	}
+
+	&:has(.card:hover) .card:not(:hover),
+	&:has(.card:active) .card:not(:active),
+	&:has(.card:focus) .card:not(:focus) {
+		a {
+			.framhlid {
+				scale: 0 1;
+				transition: scale 0.25s;
+			}
+
+			.bakhlid {
+				scale: 1;
+				transition: scale 0.5s ease-out;
+				transition-delay: 0.25s;
+			}
+		}
+	}
+
+
+	.card {
+		transition: opacity 1s ease-in-out;
+		// grid-column-end: span 1;
+		width: 250px;
+		height: 350px;
+		// background-color: #dddddd;
+		// background: -webkit-linear-gradient(#F0F0F0, #F6F7EB, );
+		border-radius: 12.5px;
+		// border-radius: 25px;
+		filter: drop-shadow(10px 30px 50px #000000);
+
+		a {
+			box-sizing: border-box;
+			align-self: center;
+			// padding: 12.5px;
+			display: flex;
+			color: #0F0E16;
+			font-weight: 400;
+			font-size: 1em;
+			// display: grid;
+			// padding: 25px;
+			// margin: 10px;
+			// border-top-left-radius: ;
+			// border: 10px solid black;
+			width: 250px;
+			height: 350px;
+		}
+	}
+}
+
+
+.framhlid {
+	transition: scale 0.25s;
+	position: absolute;
+	animation-name: snua;
+	animation-duration: 0.5s;
+}
+
+.bakhlid {
+	position: absolute;
+	scale: 0 1;
+	background-color: #dddddd;
+	border-radius: 12.5px;
+	// border: 3px #ddd solid;
+
+	// display: none;
+}
+
+@keyframes snua {
+	0% {
+		scale: 0 1;
+	}
+
+	100% {
+		scale: 1;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0%;
+	}
+
+	100% {
+		opacity: 100%;
+	}
+}
+
+@media (max-width: 1050px) {
+	.cardContainer {
+		grid-template-columns: 1fr;
+		gap: 0;
+
+		:nth-child(n) {
+			grid-column-start: 1;
+			grid-row: auto;
+		}
+
+		.card {
+			justify-self: center;
+			// margin: 0 auto -2.5em;
+		}
+	}
+
+
+}

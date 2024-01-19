@@ -1,6 +1,7 @@
 $bccolor: #0F0E16;
 
 .navGrid {
+	margin: 1em 0;
 	padding: 0 5%;
 	display: grid;
 	grid-template-columns: repeat(11, minmax(0, 1fr));
@@ -9,6 +10,7 @@ $bccolor: #0F0E16;
 	font-size: 26px;
 	opacity: 100%;
 	transition: opacity 0.5s ease;
+	width: 100%;
 
 	:nth-child(even) {
 		align-self: center;
@@ -102,15 +104,71 @@ $bccolor: #0F0E16;
 }
 
 .navSticky {
-	margin: -1em 0 0 0;
+	margin: 0 0 0 0;
 	padding: 1em 5%;
 	width: 100%;
 	position: fixed;
 	z-index: 10000;
 	background: -webkit-linear-gradient($bccolor, transparent);
 	animation-name: dropdown;
-	animation-duration: 0.2s;
+	animation-duration: 0.25s;
 }
+
+.navWindow {
+	margin: 1em 0;
+	padding: 0 5%;
+	display: grid;
+	grid-template-columns: repeat(11, minmax(0, 1fr));
+	// gap: 0 126px;
+	gap: 5%;
+	text-transform: lowercase;
+	font-size: 26px;
+	opacity: 100%;
+	transition: opacity 0.5s ease;
+	width: 100%;
+
+	:nth-child(n) {
+		grid-column-end: span 11;
+		text-align: center;
+	}
+
+	:nth-child(1) {
+		grid-row: 1;
+		grid-column-end: span 2;
+		justify-self: start;
+	}
+
+	:nth-child(2),
+	:nth-child(3),
+	:nth-child(4),
+	:nth-child(5) {
+		padding: 0.25em;
+		animation-name: dropdown, fadein;
+		animation-duration: 0.25s;
+	}
+
+	:nth-child(6) {
+		grid-row: 1;
+		grid-column-start: 10;
+		grid-column-end: span 2;
+		justify-self: end;
+		align-self: start;
+	}
+
+	&__header {
+		align-items: center;
+		align-content: center;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: -webkit-linear-gradient($bccolor, transparent);
+		z-index: 100000;
+		top: 0;
+	}
+}
+
 
 @keyframes fadein {
 	0% {

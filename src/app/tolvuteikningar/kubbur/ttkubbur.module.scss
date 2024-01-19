@@ -1,13 +1,12 @@
 .teikningasett {
 	display: grid;
+	width: 100%;
+	text-align: center;
+	max-width: 2298px;
 
 	:nth-child(1) {
 		border-top: 0;
 	}
-
-	width: 100%;
-	max-width: 1498px;
-
 
 	li {
 		:nth-child(odd) {
@@ -16,34 +15,20 @@
 			margin: 0 auto;
 		}
 
-		// text-align: center;
-		// align-self: center;
-		// justify-self: center;
-		// overflow: hidden;
 		border-top: 1px white solid;
-		// border-bottom: 1px white solid;
-		// margin: 1em 0;
 		border-radius: 1em;
 
-		// width: fit-content;
-		// height: fit-content;
-		// max-width: 100%;
-		.model {
-			// text-align: center;
-			// align-self: center;
-			// justify-self: center;
-			// overflow: hidden;
-			// border-left: 1px white solid;
-			// border-right: 1px white solid;
-			// margin: 1em 0;
+		.model1 {
 			border-radius: 1em;
-			// width: fit-content;
-			// height: fit-content;
-			// max-width: 100%;
 			width: 100%;
-			height: 5vw;
-			// max-height: 100%;
 			display: block;
+		}
+
+		.model {
+			border-radius: 1em;
+			width: 100%;
+			display: block;
+			margin: -10vw auto -15vw;
 		}
 
 		.teikning {
@@ -53,20 +38,19 @@
 			height: fit-content;
 			object-fit: scale-down;
 			object-position: center;
-			// margin: 0 auto;
 			align-self: center;
 			justify-self: center;
-			// border-top: 1px white solid;
-			// border-bottom: 1px white solid;
 			border-radius: 1em;
+			margin: 0 auto;
 		}
 	}
 }
 
-.model {
-	max-width: 2298px;
-	height: 50vw;
+.model,
+.model1 {
+	// max-width: 2298px;
 	max-height: 1498px;
+	width: 100%;
 
 	:hover {
 		cursor: grab;
@@ -77,29 +61,14 @@
 	}
 }
 
-.rammi {
-	margin: 0 0 10%;
-	height: 40vw;
-	width: 80%;
-	text-align: center;
-}
-
-.vagn {
-	max-height: 80vw;
-}
-
-.tsetthlekk {
-	padding: 0.15em 0.75em;
-	margin: 0 0 0.5em;
-	border: 1px solid white;
+.teikning {
+	display: inline;
+	max-width: 100%;
+	max-height: 100%;
+	width: fit-content;
+	height: fit-content;
+	object-fit: scale-down;
+	object-position: center;
+	align-self: center;
 	border-radius: 1em;
-	color: #0F0E16;
-	font-weight: 700;
-	background: -webkit-linear-gradient(white, #F6F7EB, #F9FBE9);
-
-	&:hover {
-		color: white;
-		font-weight: 400;
-		background: transparent;
-	}
 }

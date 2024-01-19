@@ -1,0 +1,16 @@
+.tsetthlekk {
+	padding: 0.15em 0.75em;
+	margin: 0 0 0.5em;
+	border: 1px solid white;
+	border-radius: 1em;
+	color: #0F0E16;
+	font-weight: 700;
+	// background: -webkit-linear-gradient(#F6F7EB, #F9FBE9);
+	background: linear-gradient(#F6F7EB, #F9FBE9);
+
+	&:hover {
+		color: white;
+		font-weight: 400;
+		background: transparent;
+	}
+}

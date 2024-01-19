@@ -6,8 +6,10 @@
 	&__mynd {
 		object-fit: cover;
 		object-position: center;
-		height: 20vw;
-		width: 20vw;
+		height: 30vw;
+		width: 30vw;
+		max-height: 25em;
+		max-width: 25em;
 		// text-align: center;
 	}
 

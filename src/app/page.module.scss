@@ -10,14 +10,9 @@ $ivory: #f6f7ebff;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	grid-template-rows: auto;
 
-	// justify-content: center;
-	// justify-items: center;
-	// object-fit: scale-down;
-	// overflow: hidden;
 	:nth-child(1) {
 		width: max-content;
 		justify-self: center;
-		// overflow: hidden;
 		grid-row: 1;
 		grid-column-start: 1;
 		grid-column-end: span 3;
@@ -34,95 +29,5 @@ $ivory: #f6f7ebff;
 		// position: absolute;
 		align-self: flex-end;
 		justify-self: center;
-	}
-
-	// .krot {
-	// 	translate: 0 100px;
-	// 	// position: absolute;
-	// 	align-self: flex-end;
-	// 	justify-self: center;
-	// 	// align-self: center;
-	// }
-}
-
-.cardContainer {
-	// box-sizing: content-box;
-	margin: 5em 0;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0 2.5%;
-	justify-items: center;
-	// max-width: 1300px;
-
-	:nth-child(1) {
-		grid-column-start: 2;
-		grid-column-end: span 2;
-		justify-self: center;
-	}
-
-	:nth-child(2) {
-		grid-column-start: 2;
-	}
-
-	:nth-child(4) {
-		grid-column-start: 1;
-		grid-column-end: span 2;
-		grid-row: 3;
-	}
-
-	:nth-child(5) {
-		grid-row: 3;
-		grid-column-start: 2;
-		grid-column-end: span 2;
-	}
-
-	:nth-child(6) {
-		grid-row: 3;
-		grid-column-start: 3;
-		grid-column-end: span 2;
-	}
-
-	&:has(.card:hover) .card:not(:hover) {
-		opacity: 0.2;
-		transition: opacity 0.75s ease-in-out;
-	}
-
-	.card {
-		transition: opacity 1s ease-in-out;
-		// grid-column-end: span 1;
-		width: 250px;
-		height: 350px;
-		background-color: #dddddd;
-		// background: -webkit-linear-gradient(#F0F0F0, #F6F7EB, );
-		border-radius: 12.5px;
-		// border-radius: 25px;
-
-		a {
-			box-sizing: border-box;
-			align-self: center;
-			padding: 12.5px;
-			display: flex;
-			color: #0F0E16;
-			font-weight: 400;
-			font-size: 1em;
-			// display: grid;
-			// padding: 25px;
-			// margin: 10px;
-			// border-top-left-radius: ;
-			// border: 10px solid black;
-			width: 250px;
-			height: 350px;
-		}
-	}
-}
-
-
-@keyframes fadein {
-	0% {
-		opacity: 0%;
-	}
-
-	100% {
-		opacity: 100%;
 	}
 }

@@ -22,7 +22,7 @@ export default function Home() {
 						className={styles.krot}
 					/>
 				</div>
-				<CardLayout spil={[1, 2, 3]} />
+				<CardLayout spil={[1, 2, 3]} class={styles.forsiduspil} />
 			</div>
 		</>
 	);

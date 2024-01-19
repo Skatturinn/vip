@@ -1,26 +1,18 @@
 .rammi {
 	margin: 0 0 10%;
 	height: 40vw;
-	width: 80%;
+	width: 100%;
 	text-align: center;
 }
 
 .vagn {
 	max-height: 80vw;
-}
 
-.tsetthlekk {
-	padding: 0.15em 0.75em;
-	margin: 0 0 0.5em;
-	border: 1px solid white;
-	border-radius: 1em;
-	color: #0F0E16;
-	font-weight: 700;
-	background: -webkit-linear-gradient(white, #F6F7EB, #F9FBE9);
+	:hover {
+		cursor: grab;
+	}
 
-	&:hover {
-		color: white;
-		font-weight: 400;
-		background: transparent;
+	:active {
+		cursor: grabbing;
 	}
 }
