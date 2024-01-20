@@ -1,9 +1,44 @@
+$bccolor: #0F0E16;
+
 .loading {
 	height: 100vh;
 	width: 100vw;
 	z-index: 10000;
 	position: fixed;
 	cursor: wait;
+	// padding: 20vh 0 0 0;
+	margin: -10vh;
+	background: -webkit-linear-gradient($bccolor, transparent);
+
+	&::before {
+		content: 'Reyni að senda';
+		animation-name: loading;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		// height: 100vh;
+		position: fixed;
+		// padding: 100vw 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 3rem;
+		font-weight: 400;
+		// background: -webkit-linear-gradient($bccolor, transparent);
+	}
+}
+
+@keyframes loading {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 $bccolor: #0F0E16;
@@ -55,7 +90,7 @@ $bccolor: #0F0E16;
 			font-size: 2rem;
 			font-family: inherit;
 			transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-			box-shadow: 0 0 0 white;
+			box-shadow: 0 0 0 black;
 			background-color: $bccolor;
 			border-radius: 1em;
 			// padding: 0 1em;
@@ -66,7 +101,7 @@ $bccolor: #0F0E16;
 				outline: none;
 				border-color: white;
 				box-shadow: 0em 0.125em 0.75em 0.125em black;
-				transition: scale 1s;
+				transition: border 2s;
 			}
 
 			// padding: 0.5em 0;
@@ -75,7 +110,12 @@ $bccolor: #0F0E16;
 		}
 	}
 
+	.button2 {
+		background-color: green;
+	}
+
 	.button {
+		// margin: 2rem 0 0;
 		font-size: 3rem;
 		width: 100%;
 		height: 2em;
@@ -85,7 +125,8 @@ $bccolor: #0F0E16;
 		border-radius: 1em;
 		transition: scale 1s;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			cursor: pointer;
 			font-weight: 400;
 			scale: 1.1;

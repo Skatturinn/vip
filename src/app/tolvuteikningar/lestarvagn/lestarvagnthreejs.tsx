@@ -5,7 +5,6 @@ import { ihlutir } from "../kubbur/kubburthreejs";
 import { OrbitControls } from "@react-three/drei";
 import styles from "./ttlestarvagn.module.scss";
 import { useState } from "react";
-// import styles from "../kubbur/ttkubbur.module.scss";
 
 export function ThreeDteikningarLest({ samsetning, listi }: ihlutir): JSX.Element {
 	const stak = listi[0]; // smágoofy en leifir okkur að endurnota kóðan af kubbnum 

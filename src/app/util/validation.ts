@@ -1,25 +1,6 @@
-import { Validator } from "react";
 import validator from 'email-validator'
 import xss from 'xss';
-import { CustomSanitizer } from "express-validator";
-// export const createDepartment = [
-// 	stringValidator({ field: 'name', maxLength: 64 }),
-// 	stringValidator({
-// 		field: 'description',
-// 		valueRequired: false,
-// 		maxLength: 1000,
-// 	}),
-// 	departmentDoesNotExistValidator,
-// 	xssSanitizer('name'),
-// 	xssSanitizer('description'),
-// 	validationCheck,
-// 	genericSanitizer('name'),
-// 	genericSanitizer('description'),
-// 	createDepartmentHandler
-// ];
 
-
-console.log(xss('<p>asdasd<p><script />'))
 export function isUrlValid(string: string): string {
 	return URL.canParse(string) ? (new URL(string)).href : '';
 }

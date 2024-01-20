@@ -1,7 +1,6 @@
 import { CardLayout } from "../cardnavigation"
-import { NavBar } from "../navbar"
 
 export default function Page() {
 	return <>
-		<CardLayout spil={[1]} /></>
+		<CardLayout spil={[1]} class_string="" /></>
 }

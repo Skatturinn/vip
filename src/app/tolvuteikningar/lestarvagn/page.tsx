@@ -1,7 +1,4 @@
-import { NavBar } from "../../navbar"
-import Image from "next/image";
 import styles from "./ttlestarvagn.module.scss";
-import { CardLayout } from "@/app/cardnavigation";
 import { ThreeDteikningarLest } from "./lestarvagnthreejs";
 import Link from "next/link";
 import ttstyles from "../tolvuteikningar.module.scss"

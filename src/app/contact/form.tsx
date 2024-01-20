@@ -1,6 +1,6 @@
 'use client'
 import { FC } from 'react';
-import { FormEvent, useState } from "react"
+import { useState } from "react"
 import { useForm } from "react-hook-form";
 import { messagevalidationmiddleware } from '../util/validation';
 import styles from "./form.module.scss"
@@ -59,18 +59,19 @@ export const ContactForm: FC = () => {
 				<label
 					htmlFor='email'>netfang</label>
 				<input
+
 					type="text" placeholder=""
 					{...register('email', { required: true })}
 				/>
 			</div>
 			<div className={styles.field}>
 				<label
-					htmlFor='message' >Athugassemd</label>
+					htmlFor='message' >Fyrirspurn</label>
 				<textarea
 					placeholder=""
 					{...register('message', { required: true })}
 				></textarea>
 			</div>
-			<button className={styles.button}>Senda skilaboð</button>
+			<button className={register('email') ? styles.button : ''}>Senda</button>
 		</form></>
 }

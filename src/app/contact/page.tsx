@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import { NavBar } from "../navbar"
-import { CardLayout } from "../cardnavigation";
 import { ContactForm } from "./form";
 
 

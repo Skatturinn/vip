@@ -8,9 +8,10 @@ import { usePathname } from "next/navigation";
 // Mögulega hefði verið betra að vera með class fyrir hver spil en þá missum with nthchild(n) selector
 type CardLayout = {
 	spil: Array<number>,
-	class: string;
+	class_string: string;
 }
-export function CardLayout({ spil, class: string }: CardLayout) {
+
+export function CardLayout({ spil, class_string }: CardLayout) {
 	const bakhlid = <Image
 		src="/spil/bak.svg"
 		alt="Mynd af bakhlið á spili"
@@ -20,7 +21,7 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 	/>
 	let items = [];
 	spil.includes(1) && items.push(
-		<li className={`${styles.card} ${styles.spil1}`} key={'um'}><Link href='/verkefni/1'>
+		[<li className={`${styles.card} ${styles.spil1}`} key={'um'}><Link href='/verkefni/um'>
 			<Image
 				src="/spil/A-github.svg"
 				alt="Um þessa síðu"
@@ -30,7 +31,16 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 			/>
 			{bakhlid}
 		</Link>
-		</li>)
+		</li>, <li className={`${styles.card} ${styles.spil7}`} key={'haflidi'}>
+			<Link href='/verkefni/vel608g' >
+				<Image
+					src="/spil/joker.svg"
+					alt="Mættur"
+					width="250"
+					height="350"
+					className={styles.framhlid}
+				/>{bakhlid}</Link>
+		</li>])
 
 	spil.includes(2) && items.push(
 		[
@@ -58,9 +68,32 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 		]);
 	spil.includes(3) && items.push(
 		[
-			<li className={`${styles.card} ${styles.spil4}`} key={'mttur'}><Link href='/myndbond/mttur'>{bakhlid}</Link></li>,
-			<li className={`${styles.card} ${styles.spil5}`} key={'vissi'}><Link href='/myndbond/vissi'>{bakhlid}</Link></li>,
-			<li className={`${styles.card} ${styles.spil6}`} key={'svoner'}><Link href='/myndbond/svoner'>{bakhlid}</Link></li>
+			<li className={`${styles.card} ${styles.spil4}`} key={'mttur'}><Link href='/myndbond/mttur'>
+				<Image
+					src="/spil/k.svg"
+					alt="Mættur"
+					width="250"
+					height="350"
+					className={styles.framhlid}
+				/>{bakhlid}</Link></li>,
+			<li className={`${styles.card} ${styles.spil5}`} key={'vissi'}><Link href='/myndbond/vissi'>
+				<Image
+					src="/spil/q.svg"
+					alt="Vissi"
+					width="250"
+					height="350"
+					className={styles.framhlid}
+				/>
+				{bakhlid}</Link></li>,
+			<li className={`${styles.card} ${styles.spil6}`} key={'svoner'}><Link href='/myndbond/svoner'>
+				<Image
+					src="/spil/j.svg"
+					alt="Svoner"
+					width="250"
+					height="350"
+					className={styles.framhlid}
+				/>
+				{bakhlid}</Link></li>
 		]);
-	return <ul className={`${styles.cardContainer} ${string || ''}`}>{items}</ul>
+	return <ul className={`${styles.cardContainer} ${class_string || ''}`}>{items}</ul>
 }

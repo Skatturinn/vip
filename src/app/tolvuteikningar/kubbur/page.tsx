@@ -1,5 +1,3 @@
-import { NavBar } from "../../navbar"
-import Image from "next/image";
 import styles from "./ttkubbur.module.scss";
 import { ThreeDteikningar } from "./kubburthreejs";
 import { Metadata } from "next";

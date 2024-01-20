@@ -4,12 +4,14 @@
 	padding: 15em 0;
 
 	&__mynd {
-		object-fit: cover;
+		object-fit: scale-down;
 		object-position: center;
-		height: 30vw;
-		width: 30vw;
-		max-height: 25em;
-		max-width: 25em;
+		min-width: 10em;
+		min-height: 10em;
+		height: 40vw;
+		width: 40vw;
+		max-height: 20em;
+		max-width: 20em;
 		// text-align: center;
 	}
 
