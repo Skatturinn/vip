@@ -10,29 +10,29 @@ $ivory: #f6f7ebff;
 	width: 100%;
 	max-width: 2298px;
 
-	:nth-child(1) {
+	.spil1 {
 		grid-column-start: 2;
 		grid-column-end: span 2;
 		justify-self: center;
 	}
 
-	:nth-child(2) {
+	.spil2 {
 		grid-column-start: 2;
 	}
 
-	:nth-child(4) {
+	.spil4 {
 		grid-column-start: 1;
 		grid-column-end: span 2;
 		grid-row: 3;
 	}
 
-	:nth-child(5) {
+	.spil5 {
 		grid-row: 3;
 		grid-column-start: 2;
 		grid-column-end: span 2;
 	}
 
-	:nth-child(6) {
+	.spil6 {
 		grid-row: 3;
 		grid-column-start: 3;
 		grid-column-end: span 2;
@@ -132,6 +132,38 @@ $ivory: #f6f7ebff;
 
 @media (max-width: 1050px) {
 	.cardContainer {
+		// grid-template-columns: 1fr;
+		gap: 0;
+
+		.spil4 {
+			grid-column-start: 2;
+			grid-column-end: span 1;
+		}
+
+		.spil5 {
+			grid-column-start: 3;
+			grid-column-end: span 1;
+		}
+
+
+		.spil6 {
+			grid-row: 4;
+			grid-column-start: 2;
+			grid-column-end: span 2;
+			justify-self: center;
+		}
+
+		.card {
+			justify-self: center;
+			// margin: 0 auto -2.5em;
+		}
+	}
+
+
+}
+
+@media (max-width: 500px) {
+	.cardContainer {
 		grid-template-columns: 1fr;
 		gap: 0;
 
@@ -142,7 +174,6 @@ $ivory: #f6f7ebff;
 
 		.card {
 			justify-self: center;
-			// margin: 0 auto -2.5em;
 		}
 	}
 

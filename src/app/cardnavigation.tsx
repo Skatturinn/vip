@@ -19,8 +19,8 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 		className={styles.bakhlid}
 	/>
 	let items = [];
-	if (spil.includes(1)) {
-		items.push(<li className={styles.card} key={'um'}><Link href='/verkefni/1'>
+	spil.includes(1) && items.push(
+		<li className={`${styles.card} ${styles.spil1}`} key={'um'}><Link href='/verkefni/1'>
 			<Image
 				src="/spil/A-github.svg"
 				alt="Um þessa síðu"
@@ -31,22 +31,10 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 			{bakhlid}
 		</Link>
 		</li>)
-	} else if (spil.includes(2)) { // höfum ekki fyrsta spilið byrjum á tvem
-		items.push(
-			[
-				<div key={'empty'}></div> // setjum inn tómt div til að taka upp plásið
-			])
-	} else if (spil.includes(3)) {
-		items.push(
-			[
-				<div key={'empty'}></div>,
-				<div key={'empty1'}></div>,
-				<div key={'empty2'}></div>
-			])
-	}
-	spil.includes(2) ? items.push(
+
+	spil.includes(2) && items.push(
 		[
-			<li className={styles.card} key={'kubbur'}><Link href='/tolvuteikningar/kubbur'>
+			<li className={`${styles.card} ${styles.spil2}`} key={'kubbur'}><Link href='/tolvuteikningar/kubbur'>
 				<Image
 					src="/spil/3-kubbur.svg"
 					alt="Kubbur"
@@ -57,7 +45,7 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 				{bakhlid}
 			</Link>
 			</li>,
-			<li className={styles.card} key={'lestarvagn'}><Link href='/tolvuteikningar/lestarvagn'>
+			<li className={`${styles.card} ${styles.spil3}`} key={'lestarvagn'}><Link href='/tolvuteikningar/lestarvagn'>
 				<Image
 					src="/spil/8-lestarvagn.svg"
 					alt="Lestarvagn"
@@ -67,12 +55,12 @@ export function CardLayout({ spil, class: string }: CardLayout) {
 				/>
 				{bakhlid}</Link>
 			</li>
-		]) : '';
-	spil.includes(3) ? items.push(
+		]);
+	spil.includes(3) && items.push(
 		[
-			<li className={styles.card} key={'mttur'}><Link href='/myndbond/mttur'>{bakhlid}</Link></li>,
-			<li className={styles.card} key={'vissi'}><Link href='/myndbond/vissi'>{bakhlid}</Link></li>,
-			<li className={styles.card} key={'svoner'}><Link href='/myndbond/svoner'>{bakhlid}</Link></li>
-		]) : '';
+			<li className={`${styles.card} ${styles.spil4}`} key={'mttur'}><Link href='/myndbond/mttur'>{bakhlid}</Link></li>,
+			<li className={`${styles.card} ${styles.spil5}`} key={'vissi'}><Link href='/myndbond/vissi'>{bakhlid}</Link></li>,
+			<li className={`${styles.card} ${styles.spil6}`} key={'svoner'}><Link href='/myndbond/svoner'>{bakhlid}</Link></li>
+		]);
 	return <ul className={`${styles.cardContainer} ${string || ''}`}>{items}</ul>
 }
