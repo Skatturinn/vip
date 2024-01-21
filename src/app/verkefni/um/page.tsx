@@ -69,6 +69,14 @@ export default function Page() {
 				sem er fyrir þessa tiltekna síðu. Ef að við værum einungis að notast við react en ekki next þá mundi notandinn fá tómt html skjal sem mundi svo vísa vafranum hvert hann
 				ætti að sækja js sciptuna sem mundi svo byggja skjalið fyrir notendann. Þetta hjálpar okkur í leitarvélum þar sem við gefum frá okkur html skjal með gögnum, head og öðru metadata.
 			</p>
+			<h2>Síður með app router</h2>
+			<p>Á github er hægt að sjá skrárnar sem samsetja þessa síðu ef þú ert staðsettur í rótar skjalinu þá geturu séður hverja síðu í undirslóðinni
+				<q>/src/app/</q>. Þar er ein mappa fyrir hverja síðu. Inní hverri möppu er page.tsx skjal sem stýrir efni síðunar. Þetta er htmlið sem fer
+				inní layout.tsx sem býr svo til alla síðuna. Ef það þurfti að breyta útlitinu er sér <q>.module.scss</q> skrá sem segir til um klassa fyrir þá skrá.
+				Hægt er að sjá við hvaða skrár hver síða notar með því að opna viðeigandi page.tsx skrá og lesa hvaðan styles er importað. Í einhverjum tilvikum notast
+				hún við tvær og er þá t.d. ttstyles breytu imortað í staðin. Einnig eru javascript skrár sem annaðhvort sjá um virkni eða útlit í sömu möppu. Þeim er síðan importað
+				og kallað á í page.tsx skránni. Best er að skoða þetta sjálfur á <a href={'https://github.com/Skatturinn/vip'}>github</a>.
+			</p>
 		</section>
 		<section className={styles.sec} id="tolvuteikningar">
 			<h1>Tölvuteikningar</h1>
@@ -98,13 +106,16 @@ export default function Page() {
 				<code>scene.traverse</code> Þetta ítrar í gegnum alla senuna sem við getum sótt með <code>useGLTF</code> fallinu. Þá er bara
 				að stilla hvern hlut <code>o.material.wireframe = true;</code>. Einfaldara verður það ekki.
 				Til að smíða síðuna þá bý ég til tvær möppur eina með myndum og eina með líkönum. Líkön og myndir viðeigandi hlutar deila nafni.
-				Þá er bara að búa til component í react sem sækir hvert mynda & líkana par og skilar lista. af li jsx elementum.
+				Þá er bara að búa til component í react sem ítrar í gegnum og sækir hvert mynda & líkana par og skilar lista af li jsx elementum.
+				sjá <a href="https://github.com/Skatturinn/vip/blob/main/src/app/tolvuteikningar/kubbur/kubburthreejs.tsx"><q>/tolvuteikingar/kubbur/kubburthreejs.tsx</q></a> á github.
 			</p>
 			<h2>Lestarvagn</h2>
-			<p>Vagninn er mikið stærri og flóknari. Ég er ekki með .glb skjölin hans þar sem ekki hvarflaði að mér að nota það en ég er með .obj skjöl.
-				Blender sem er frítt þrívíddar forrit styður bæði .obj og .glb, bingo. Notaði það til að læra um innihald .glb skjala. Teikningasettið
+			<p>Vagninn er mikið stærri og flóknari. Ég er ekki með .glb skjölin hans þar sem ekki hvarflaði að mér að nota það á sínum tíma en ég er með .obj skjöl.
+				Blender sem er frítt þrívíddar forrit styður bæði .obj og .glb, bingo. Notaði það til að læra um innihald .glb skjala. Glb skjöl innihalda hvern íhlut,áklæðningu og jafnvel hreyfingar allt með sínum eigin nöfnum.
+				Teikningasettið
 				er hinsvegar hátt í 90 bls og ég sé mér ekki fært í að endurgera þetta. Breytum einu litlu obj sem sýnir þó eitthvað af vagninum í .glb
-				höfum svo bara hlekk á pdf fyrir áhuga sama.
+				höfum svo bara hlekk á pdf fyrir áhuga sama. Vagninn er 10mb yikes. Vonandi hefur fólk ekki áhuga á lestarvögnum. Annars er <q>/lestarvagnthreejs.tsx</q> skráin
+				bara einfaldari útgáfa af ...threejs.tsx skránni fyrir kubbinn, engin ítrun engar málsetningar bara líkan og hlekkur.
 			</p>
 			<a href="https://www.blender.org/download/">Hér er hægt að smella til að sækja Blender</a>
 		</section>
@@ -123,7 +134,7 @@ export default function Page() {
 				gera stafsetning villu. Slekk á þessum athugunum í bili og skoða bara mx,regex og hvert netfangið gæti verið disposable.
 			</p>
 			<h2>Hvernig hefuru samband?</h2>
-			<h3>Taka við gögnum</h3>
+			<h3>1. Taka við gögnum</h3>
 			<p>Notandi fyllir út í formið og smellir á senda. Nú bregst javascript við.
 				React gefur okkur fallið useForm sem passar að allir reitir séu útfylltir sem þarf að að fylla í nafn,fyrirspurn og tölvupóst.
 				Þegar notandinn hefur fyllt út í reitina og send inn þá skoðum við fyrst gögnin.
@@ -135,7 +146,7 @@ export default function Page() {
 				að reyna að senda skilaboðin. Gögnin eru síðan send á contact api.
 			</p>
 			<a href="https://github.com/Skatturinn/vip/blob/main/src/app/contact/form.tsx">Sjá /contact/form.tsx á github</a>
-			<h3>Senda gögn</h3>
+			<h3>2. Senda gögn</h3>
 			<p>Í fyrra skrifi gengum við úr skugga um að gögnin væru með réttu formi. En við vitum ekki hvort
 				tölvupósturinn er til eða ekki. Hann gæti verið bull@rugl.sull og sloppið í gegnum síuna sem skoðar
 				bara hvort hann sé formataður rétt. Við notumst því við annan validator hýsingar megin. Hann var of stangur
