@@ -15,6 +15,12 @@
 	width: var(--border-size);
 }
 
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
 $bccolor: #0F0E16;
 $hvitur: #fff;
 

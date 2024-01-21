@@ -17,10 +17,15 @@ export default function Page() {
 		<section>
 			<h1>Efnisyfirlit</h1>
 			<ol>
-				<li>1</li>
+				<li><a href="#uppsetning">1. Uppsetning</a></li>
+				<li><a href="#tolvuteikningar">2. Tölvuteikningar</a></li>
+				<li><a href="#samband">3. Hafðu samband</a></li>
+				<li><a href="#honnun">4. Hönnun</a></li>
+				<li><a href="#myndbond">5. Myndbönd</a></li>
+				<li><a href="#hysing">6. Hýsing</a></li>
 			</ol>
 		</section>
-		<section className={styles.sec}>
+		<section className={styles.sec} id="uppsetning">
 			<h1>Uppsetning</h1>
 			<p>Node js er javascript <q>js</q> keyrsluumhverfi sem gerir okkur kleift að sækja ýmissa js pakka. Hægt er að sjá alla pakka sem ég hef sótt í package.json skránni á git.
 				Þeir hjálpa okkur með uppsetningu á síðunni og virkni hennar.
@@ -62,7 +67,7 @@ export default function Page() {
 				ætti að sækja js sciptuna sem mundi svo byggja skjalið fyrir notendann. Þetta hjálpar okkur í leitarvélum þar sem við gefum frá okkur html skjal með gögnum, head og öðru metadata.
 			</p>
 		</section>
-		<section className={styles.sec}>
+		<section className={styles.sec} id="tolvuteikningar">
 			<h1>Tölvuteikningar</h1>
 			<p>Spurning um hvaða efni ég gæti hýst á þessari síðu sem gæti verið áhugavert og gagnlegt hrjáði mig lengi. Einn daginn mundi ég eftir rubikskubbnum
 				sem ég hafði gert sem verkefni í áfanga hjá Háskóla Íslands. Það var þó búið að fara yfir teikningarnar og krota í þær og ekki er hægt að setja
@@ -100,7 +105,7 @@ export default function Page() {
 			</p>
 			<a href="https://www.blender.org/download/">Hér er hægt að smella til að sækja Blender</a>
 		</section>
-		<section className={styles.sec}>
+		<section className={styles.sec} id="samband">
 			<h1>Hafðu samband</h1>
 			<p>Þetta er einn mikilvægasti hlutinn á allri síðunni. Það að hafa form sem þú getur útfilt til að hafa samband er lykilatriði í heimasíðu síðu.
 				Það er til mikið efni um það hvernig er hægt að setja þetta upp. Fyrsta tilraun gengur ágættlega þar til við komum að api hlutanum. Kemur í ljós
@@ -115,7 +120,7 @@ export default function Page() {
 				gera stafsetning villu. Slekk á þessum athugunum í bili og skoða bara mx,regex og hvert netfangið gæti verið disposable.
 			</p>
 		</section>
-		<section className={styles.sec}>
+		<section className={styles.sec} id="honnun">
 			<h1>Hönnun</h1>
 			<Litaspil liti={['#F9FBE9', '#F6F7EB', '#ffffff', '#dddddd', '#0F0E16', '#000000',]} />
 			<p>Litavalið var einfalt nýverið hef ég verið mjög hrifin af hugmyndinni <q>navy and platinum pink</q> og átti bleikur að vera áherslu liturinn til að byrja með
@@ -149,14 +154,14 @@ export default function Page() {
 				fyllir heilinn inn í í framhaldinu. Að snúa spilum á forsíðunni er uppáhalds virknin, hvað mig varðar.
 			</p>
 		</section>
-		<section className={styles.sec}>
+		<section className={styles.sec} id="myndbond">
 			<h1>Myndbönd</h1>
 			<p>Mun setja inn eh lítinn teksta og myndir úr myndböndunum, embedda svo myndböndinn eða vísa beint á þau skoða þetta seinna.</p>
 		</section>
-		<section className={styles.sec}>
-			<h1>Þessi síða er í hýsingu hjá Vercel</h1>
-			<p>Tenging við github repo. Svo bara ýta á build. Reyndar var ég óvar með <q>gæsalappir</q> inní htmlinu smá obbó og exportaði font stylingunum úr layout.
-				Ekkert mál að laga það, baddabing baddabúm síðan er komin í loftið</p>
+		<section className={styles.sec} id="hysing">
+			<h1>Hýsing</h1>
+			<p>Þessi síða er í hýsingu hjá Vercel útgefanda Next js. Einföld tenging við github repo. Svo bara ýta á build. Reyndar var ég óvart með <q>gæsalappir</q> inní htmlinu smá obbó og exportaði font stylingunum úr layout.
+				Ekkert mál að laga það, baddabing baddabúm síðan er komin í loftið á <a href="elli.vip">elli.vip</a></p>
 		</section>
 	</>
 }

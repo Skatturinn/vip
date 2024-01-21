@@ -9,9 +9,9 @@ export default function Page() {
 			<h1>Verkefni 1</h1>
 			<p>Veldu og smíðaðu html sniðmát fyrir vefsíðuna þína, skipulegðu hana með upplýsingum um þig og þína ferilskrá.</p>
 			<ol>
-				<li><a href="#v11">1.  Skrásettu ítarlega hvernig þú framkvæmdir fyrsta verkefnið í máli og myndum þar sem eftirtaldið kemur fram:</a></li>
-				<li><a href="#v12">2. Segðu frá hvað þú vilt fá út úr áfanganum og veltu fyrir þér hvað þú myndir vilja gera sem lokaverkefni.</a></li>
-				<li><a href="#v13">3. Útskýrðu hvernig þú hlóðst upp síðunni á Github, hvort þú notaðir git bash eða aðra aðferð.</a></li>
+				<li><a href="#v11">1. Lýsing á framkvæmd</a></li>
+				<li><a href="#v12">2. Óskir varðandi áfanga</a></li>
+				<li><a href="#v13">3. Notkun á git</a></li>
 			</ol>
 			<h2 id="v11">1. Sjá um þessa síðu á /verkefni/um</h2>
 			<a href="/verkefni/um">Þetta er hlekkur sem vísar þangað
@@ -30,6 +30,10 @@ export default function Page() {
 			<code>git add . <br />
 				git commit -m stutt lysing a breytingum <br />
 				git push</code>
+			<p>Þar sem síðan mín er Next js app og nostast við react jsx element þá setti ég hana í hýsingu hjá vercel en ekki github.
+				Kosturinn við þetta er að ég hef bakenda fyrir fyrirspurnir og annað sjá <br /><a href="/verkefni/um">um þessa síðu</a>.
+
+			</p>
 			<h2>Um mig og ferilskrá</h2>
 			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur.</p>
 			<p>Fyrir ýtarlegri upplýsingar hafðu samband með því að senda póst á contact@elli.vip eða með því að fylla í formið á <br />
