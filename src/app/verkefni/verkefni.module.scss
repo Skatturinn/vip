@@ -1,0 +1,86 @@
+.sec {
+	padding: 2rem 0;
+	width: 80%;
+	font-size: 16px;
+	max-width: 1500px;
+
+	dl {
+		dd {
+			margin: 0 0 0 1em;
+			font-weight: 100;
+		}
+	}
+
+	a {
+		opacity: 1;
+		border: #fff 1px solid;
+		border-radius: 1em;
+		padding: 0 1em;
+		font-weight: 400;
+		// text-decoration: dashed;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0.5rem 0 0.25rem;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	p {
+		text-align: justify
+	}
+}
+
+.gitlink {
+	background-color: #F6F7EB;
+	border: 1px white solid;
+	border-radius: 1em;
+	margin: 1em;
+	font-weight: 400;
+	color: #000000;
+	align-items: center;
+	align-content: center;
+	padding: 0.15em 0.5em 0.15em 0;
+	transition: padding 1s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		transition: padding 1s;
+		padding: 0.15em 10.5em 0.15em 10em;
+	}
+
+	img {
+		margin: 0 0.25em;
+	}
+}
+
+.synidmi {
+	text-align: center;
+	padding: 1em;
+	height: fit-content;
+
+	img {
+		object-fit: scale-down;
+		height: fit-content;
+		max-height: 350px;
+		width: 80%;
+
+		max-width: 1900px;
+	}
+}

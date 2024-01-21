@@ -2,11 +2,10 @@ import { type NextRequest, NextResponse } from 'next/server';
 import Mail from 'nodemailer/lib/mailer';
 import nodemailer from 'nodemailer';
 import validate from 'deep-email-validator'
-import { init } from 'next/dist/compiled/webpack/webpack';
 
 export async function POST(req: NextRequest) {
 	const { a } = await req.json()
-	const err = await validate(a.email)
+	const err = await validate({ email: a.email, validateTypo: false, validateDisposable: true, validateSMTP: false })
 	if (err.valid) {
 		const transport = nodemailer.createTransport({
 			service: 'gmail',
@@ -29,9 +28,9 @@ export async function POST(req: NextRequest) {
 
 		const mailOptions: Mail.Options = {
 			from: process.env.MY_EMAIL,
-			to: process.env.MY_EMAIL,
+			to: process.env.TO_EMAIL,
 			// cc: a.email, // (uncomment this line if you want to send a copy to the sender)
-			subject: `Message from ${a.name} (${a.email})`,
+			subject: `Skilaboð frá ${a.name} (${a.email}) (${err.valid || err.reason})`,
 			text: a.message,
 		};
 		const sendMailPromise = () =>
@@ -52,7 +51,7 @@ export async function POST(req: NextRequest) {
 		}
 	} else {
 		// return NextResponse.json({ error: `Tölvupóstur ógildur ${err.reason}` }, { status: 400 });
-		const myOptions = { status: 400, statusText: "Villa: Skilabod ekki sent, lagadu netfangid" };
+		const myOptions = { status: 400, statusText: `${err.reason} villa: Skilabod ekki send, athugaðu netfangid eða sendu póst á contact@elli.vip` };
 		return new Response(`${err.reason} villa`, myOptions)
 	}
 }

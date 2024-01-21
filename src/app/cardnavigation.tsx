@@ -10,15 +10,14 @@ type CardLayout = {
 	spil: Array<number>,
 	class_string: string;
 }
-
+const bakhlid = <Image
+	src="/spil/bak.svg"
+	alt="Mynd af bakhlið á spili"
+	width="250"
+	height="350"
+	className={styles.bakhlid}
+/>
 export function CardLayout({ spil, class_string }: CardLayout) {
-	const bakhlid = <Image
-		src="/spil/bak.svg"
-		alt="Mynd af bakhlið á spili"
-		width="250"
-		height="350"
-		className={styles.bakhlid}
-	/>
 	let items = [];
 	spil.includes(1) && items.push(
 		[<li className={`${styles.card} ${styles.spil1}`} key={'um'}><Link href='/verkefni/um'>
@@ -96,4 +95,19 @@ export function CardLayout({ spil, class_string }: CardLayout) {
 				{bakhlid}</Link></li>
 		]);
 	return <ul className={`${styles.cardContainer} ${class_string || ''}`}>{items}</ul>
+}
+
+type LitaInntak = {
+	liti: Array<string>
+}
+
+export function Litaspil({ liti }: LitaInntak) {
+	const listi: Array<Array<JSX.Element>> = [];
+	liti.forEach((stak, nr) => {
+		listi.push([<li className={`${styles.card}`} key={nr}
+			style={{ backgroundColor: stak }}>
+			<p style={{ backgroundColor: '#0F0E16', textAlign: 'center', }}>{stak}</p>
+		</li>])
+	})
+	return <ul className={`${styles.cardContainer}`}>{listi}</ul>
 }
