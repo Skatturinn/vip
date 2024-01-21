@@ -153,5 +153,10 @@ export default function Page() {
 			<h1>Myndbönd</h1>
 			<p>Mun setja inn eh lítinn teksta og myndir úr myndböndunum, embedda svo myndböndinn eða vísa beint á þau skoða þetta seinna.</p>
 		</section>
+		<section className={styles.sec}>
+			<h1>Þessi síða er í hýsingu hjá Vercel</h1>
+			<p>Tenging við github repo. Svo bara ýta á build. Reyndar var ég óvar með <q>gæsalappir</q> inní htmlinu smá obbó og exportaði font stylingunum úr layout.
+				Ekkert mál að laga það, baddabing baddabúm síðan er komin í loftið</p>
+		</section>
 	</>
 }
