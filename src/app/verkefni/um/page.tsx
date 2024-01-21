@@ -22,11 +22,12 @@ export default function Page() {
 		</section>
 		<section className={styles.sec}>
 			<h1>Uppsetning</h1>
-			<p>Node js er javascript ('js') keyrsluumhverfi sem gerir okkur kleift að sækja ýmissa js pakka. Hægt er að sjá alla pakka sem ég hef sótt í package.json skránni á git.
+			<p>Node js er javascript <q>js</q> keyrsluumhverfi sem gerir okkur kleift að sækja ýmissa js pakka. Hægt er að sjá alla pakka sem ég hef sótt í package.json skránni á git.
 				Þeir hjálpa okkur með uppsetningu á síðunni og virkni hennar.
-				Til að setja þessa síðu upp var skipunin "<code>npx create-next-app vip</code>" keyrð. Hún stofnar Next js app möppu. Nextjs er react framework sem
-				einfaldar okkur lífið til muna. Þá er next js búið að ákveða með hverskonar hætti síður og leiðsögn ('routing') þeirra á milli skuli vera.
-				Við fáum þá uppsett package.json skrá sem inniheldur dev,build,start og lint skipunum. Þær eru keyrðar með t.d. skipuninni '<code>npm run dev</code>'
+				Til að setja þessa síðu upp var skipunin <q><code>npx create-next-app vip</code></q> keyrð. Hún stofnar Next js app möppu. Nextjs er react framework sem
+				einfaldar okkur lífið til muna. Þá er next js búið að ákveða með hverskonar hætti síður og leiðsögn (<q>routing</q>) þeirra á milli skuli vera.
+				Við fáum þá uppsett package.json skrá sem inniheldur dev,build,start og lint skipunum. Þær eru keyrðar með t.d. skipuninni
+				<code>npm run dev</code>
 				sem ég hef notast við á meðan ég vann þessa síðu. Þetta sparar okkur það að setja upp alla þá node js pakka sem við mundum þurfa til
 				að gera okkar eigin dev skipun með browser-sync og sass-watch í mínu tilviki. Það er einnig búið að útfæra hvernig .env er sett upp og vill next að við notumst
 				við skrá undir nafninu .env.local. Ég ákvað einnig að notast við nýja app routerin þeirra. Þar er undirslóðir síðunar í raun vísanir á möppur með sameiginlegu nafnini
@@ -40,8 +41,10 @@ export default function Page() {
 				hjá hýsandanum og fá þá grunn html skjalið það er síðan sent með react kóða til vafra notandans. Þá fær notandinn grunn html skjalið sem inniheldur
 				mest allt sem hann þarf í grunninn. React byggir svo síðuna í raun aftur onná það sem er komið með tilskipunum sem next js skilur eftir fyrir það.
 				Þá fáum við í raun kosti þess að keyra htmlið í vafra notendans og við skilum ekki frá okkur tómum html skjölum. Helsta dæmið um þetta á þessari síðu
-				er "Hafðu samband" síðan þar sem formið notast við notenda virkni og í tilvísunar stikunni efst á skjánum sem sýnir notenda hvar hann er stattur.
+				er <q>Hafðu samband</q> síðan þar sem formið notast við notenda virkni og í tilvísunar stikunni efst á skjánum sem sýnir notenda hvar hann er stattur.
 				Til að sjá htmlið sem þú færð frá hýsingunni geturu ýtt á F12 eða viðeigandi takka til að fá upp network flipan frá vafranum þínum, sjá mynd.
+			</p>
+			<p>Það er hægt að lýta á það þannig að Next js gefur okkur sniðmát að react forritunar umhverfi til að smíða síðuna sem styður bæði SSR (server side rendering) og CSR (client side rendering).
 			</p>
 			<figure className={styles.synidmi}>
 				<Image
@@ -115,7 +118,7 @@ export default function Page() {
 		<section className={styles.sec}>
 			<h1>Hönnun</h1>
 			<Litaspil liti={['#F9FBE9', '#F6F7EB', '#ffffff', '#dddddd', '#0F0E16', '#000000',]} />
-			<p>Litavalið var einfalt nýverið hef ég verið mjög hrifin af hugmyndinni "navy and platinum pink" og átti bleikur að vera áherslu liturinn til að byrja með
+			<p>Litavalið var einfalt nýverið hef ég verið mjög hrifin af hugmyndinni <q>navy and platinum pink</q> og átti bleikur að vera áherslu liturinn til að byrja með
 				en það kom illa fyrir augu. Þetta er þá navy,white og latte litir aðalega. Ég hef ítrekað verið að notast við navy litað letur á létt latte bakgrunn í
 				skilaverkenfum í vefforitun. Ég opnaði upp figma hendi inn mynd og hinu sígilda poppins letri og var kominn með grunninn að hönnuninn eins og hún leggur sig í dag.
 			</p>
@@ -129,20 +132,20 @@ export default function Page() {
 				<figcaption>Mynd af hönnun úr figma</figcaption>
 			</figure>
 			<p>
-				Það að hafa "hafðu samband" flippan feitari er til að ýta augum notendans upp í hægra hornið þar sem hann kallar augun til sýn.
+				Það að hafa <q>hafðu samband</q> flippan feitari er til að ýta augum notendans upp í hægra hornið þar sem hann kallar augun til sýn.
 				Þetta er mikið léttari og fíngerðari hönnun en að hafa bleika öskrandi stafi. Bara bjartari og feitari.
 				Sjálfsmyndin er úr myndbandinu mttur. Hugmyndin að því
-				að hafa valmyndir sem spil kom frá því að ég hef alltaf haft mikið dálæti af spilum og að gluggar á síðum eru oft nefndir "cards" eða spjöld. Ég hannaði svo hvert spil í
+				að hafa valmyndir sem spil kom frá því að ég hef alltaf haft mikið dálæti af spilum og að gluggar á síðum eru oft nefndir <q>cards</q> eða spjöld. Ég hannaði svo hvert spil í
 				figma með að mestu svg myndum og exportaði svo hvern ramma sem svg. Flest spilin ættu því að lýta vel út við allar upplausnir.
 			</p>
 			<h2>SCSS</h2>
 			<p>Til að útfæra síðan útlitið á síðunni notaðist ég við scss sem bætir við þægilegri virkri við css sem minnkar allskyns óþarfa endurskrif.
-				Það getur jafnvel verið læsilegra. Next styður scss með því að import styles frá 'heiti skráar'.module.scss,
+				Það getur jafnvel verið læsilegra. Next styður scss með því að import styles frá <q>heiti skráar</q>.module.scss,
 				<a href={`https://github.com/Skatturinn/vip/blob/main/src/app/cardnavigation.module.scss`}>sjá eina slíka skrá á git.</a>
 				Ég kynntist því nýlega í css að geta haft áhrif á alla meðlimi foreldris sem eru ekki valdir ef einn er valin. Nota það í leiðarvísirstikunni
 				hér efst á síðunni en einnig í spilunum. Var að fikta með scale í css og tók eftir því að ef þú heldur hæðinni fastri og tansitionar hliðini.
 				Frá einum í núlll og núll í einn lýtur smá út eins og þú sért að snúa hlutnum. Notum þetta á spilin. Búum til bakhlið í figma og þegar framhliðin
-				er búin að "snúast" þá snúum við bakhliðinni. Sleppum bara bakhliðinni og snúum framhliðinni strax til baka. Þar sem notandinn sá þetta í fyrsta skiptið
+				er búin að <q>snúast</q> þá snúum við bakhliðinni. Sleppum bara bakhliðinni og snúum framhliðinni strax til baka. Þar sem notandinn sá þetta í fyrsta skiptið
 				fyllir heilinn inn í í framhaldinu. Að snúa spilum á forsíðunni er uppáhalds virknin, hvað mig varðar.
 			</p>
 		</section>

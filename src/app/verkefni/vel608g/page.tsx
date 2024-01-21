@@ -28,10 +28,10 @@ export default function Page() {
 				á listanum í git og breytingarnar en að notast við skipanirnar.
 			</p>
 			<code>git add . <br />
-				git commit -m "stutt lysing a breytingum" <br />
+				git commit -m stutt lysing a breytingum <br />
 				git push</code>
-			<h2>"Um mig" og "ferilskrá"</h2>
-			<p>Ég er Elías Lúðvíksson, áhuga vefforitari greinilega.</p>
+			<h2>Um mig og ferilskrá</h2>
+			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur.</p>
 			<p>Fyrir ýtarlegri upplýsingar hafðu samband með því að senda póst á contact@elli.vip eða með því að fylla í formið á <br />
 				<a href="/contact">hafðu samband</a> .</p>
 			<h3>Starfsreynsla</h3>
