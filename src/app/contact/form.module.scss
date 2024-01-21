@@ -69,6 +69,13 @@ $bccolor: #0F0E16;
 			}
 		}
 
+		input:focus+label,
+		input:not(:placeholder-shown)+label {
+			transform: translate(0, -1.25em);
+			padding: 0 0 0 0;
+			pointer-events: none;
+		}
+
 		label {
 			font-family: inherit;
 			font-weight: 100;
