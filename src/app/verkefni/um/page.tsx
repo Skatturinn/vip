@@ -176,18 +176,23 @@ export default function Page() {
 				Það að hafa <q>hafðu samband</q> flippan feitari er til að ýta augum notendans upp í hægra hornið þar sem hann kallar augun til sýn.
 				Þetta er mikið léttari og fíngerðari hönnun en að hafa bleika öskrandi stafi. Bara bjartari og feitari.
 				Sjálfsmyndin er úr myndbandinu mttur. Hugmyndin að því
-				að hafa valmyndir sem spil kom frá því að ég hef alltaf haft mikið dálæti af spilum og að gluggar á síðum eru oft nefndir <q>cards</q> eða spjöld. Ég hannaði svo hvert spil í
-				figma með að mestu svg myndum og exportaði svo hvern ramma sem svg. Flest spilin ættu því að lýta vel út við allar upplausnir.
+				að hafa valmyndir sem spil kom frá því að ég hef alltaf haft mikið dálæti af spilum og að gluggar á síðum eru oft nefndir <q>cards</q> eða spjöld.
+				Hvert spil er hannað í
+				<a href="figma.com">figma</a> með að mestu svg myndum og exportaði svo hvern ramma sem svg. Flest spilin ættu því að lýta vel út við allar upplausnir.
+				Þrista kubburinn var heilt megabyte á tímapunkti en með því að viðhalda flókna kraðakinu bara í miðju myndinni og að
+				búa til einfaldari kubb fyrir hin merkin þá komumst við niður í 600kb, ég vill ekki fórna kraðakinu svo við seigjum þetta gott í bili.
 			</p>
 			<h2>SCSS</h2>
 			<p>Til að útfæra síðan útlitið á síðunni notaðist ég við scss sem bætir við þægilegri virkri við css sem minnkar allskyns óþarfa endurskrif.
-				Það getur jafnvel verið læsilegra. Next styður scss með því að import styles frá <q>heiti skráar</q>.module.scss,
+				Það getur jafnvel verið læsilegra. Next styður scss með því að import styles frá <q>./<q>heiti skráar</q>.module.scss</q>,
 				<a href={`https://github.com/Skatturinn/vip/blob/main/src/app/cardnavigation.module.scss`}>sjá eina slíka skrá á git.</a>
 				Ég kynntist því nýlega í css að geta haft áhrif á alla meðlimi foreldris sem eru ekki valdir ef einn er valin. Nota það í leiðarvísirstikunni
 				hér efst á síðunni en einnig í spilunum. Var að fikta með scale í css og tók eftir því að ef þú heldur hæðinni fastri og tansitionar hliðini.
 				Frá einum í núlll og núll í einn lýtur smá út eins og þú sért að snúa hlutnum. Notum þetta á spilin. Búum til bakhlið í figma og þegar framhliðin
 				er búin að <q>snúast</q> þá snúum við bakhliðinni. Sleppum bara bakhliðinni og snúum framhliðinni strax til baka. Þar sem notandinn sá þetta í fyrsta skiptið
-				fyllir heilinn inn í í framhaldinu. Að snúa spilum á forsíðunni er uppáhalds virknin, hvað mig varðar.
+				fyllir heilinn inn í í framhaldinu. Að snúa spilum á forsíðunni er uppáhalds virknin, hvað mig varðar. Uppröðun spilana
+				notast við <code>display: grid;</code> sem ég hef vanist við að nota þó nokkuð. Hægt er að sjá scss kóðan fyrir spilin á git í skjalinu
+				<a href="https://github.com/Skatturinn/vip/blob/main/src/app/cardnavigation.module.scss"><q>.../cardnavigation.module.scss</q></a>
 			</p>
 		</section>
 		<section className={styles.sec} id="myndbond">
