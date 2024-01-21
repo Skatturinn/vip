@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 	// }
 };
 
-export const poppins = Poppins({
+const poppins = Poppins({
 	weight: ["100", "400", "700"],
 	subsets: ["latin"]
 });
