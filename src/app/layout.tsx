@@ -9,13 +9,14 @@ export const metadata: Metadata = {
 	title: "Elías Lúðvíksson",
 	description: "Elias Ludviksson / Elli.vip",
 	authors: { name: 'Elías Lúðvíksson', url: '' },
-	// openGraph: {
-	// 	locale: 'is',
-	// 	title: 'Heimasíða Elíasar Lúðvíkssonar',
-	// 	type: 'website',
-	// 	siteName: 'Elías Lúðvíksson',
-	// 	description: 'Síða sem ég byggði í þeim tilgangi að sýna færni á sviði vefforitunar. Hún hýsir einnig verkefni sem ég hef unnið á öðrum sviðum til sýnis.',
-	// }
+	openGraph: {
+		locale: 'is',
+		title: 'Heimasíða Elíasar Lúðvíkssonar',
+		type: 'website',
+		siteName: 'Elías Lúðvíksson',
+		description: 'Síða sem ég byggði í þeim tilgangi að sýna færni á sviði vefforitunar ásamt öðrum.',
+		images: '/myndir/eliasludviksson.png'
+	}
 };
 
 const poppins = Poppins({
