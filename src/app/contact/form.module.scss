@@ -122,7 +122,7 @@ $bccolor: #0F0E16;
 		transition: scale 1s;
 
 		&:hover,
-		&:focus {
+		&:focus-visible {
 			cursor: pointer;
 			font-weight: 400;
 			scale: 1.1;
@@ -139,4 +139,14 @@ $bccolor: #0F0E16;
 
 .centertext {
 	text-align: center;
+
+	address {
+		a {
+			// font-weight: 400;
+			font-size: 1.5rem;
+			// border-bottom: 1px white solid;
+			border-radius: 1em;
+			padding: 0 1em;
+		}
+	}
 }

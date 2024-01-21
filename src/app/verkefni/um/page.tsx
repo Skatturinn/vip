@@ -10,13 +10,14 @@ export default function Page() {
 		<Image
 			src={'/git.svg'}
 			alt={'github logo'}
-			width={14}
-			height={14} />
-		Skoða github
+			width={30}
+			height={30} />
+		< br />
+		Skoða á github
 	</Link>
 		<section>
 			<h1>Efnisyfirlit</h1>
-			<ol>
+			<ol className={styles.efnislit}>
 				<li><a href="#uppsetning">1. Uppsetning</a></li>
 				<li><a href="#tolvuteikningar">2. Tölvuteikningar</a></li>
 				<li><a href="#samband">3. Hafðu samband</a></li>
@@ -42,6 +43,8 @@ export default function Page() {
 			<p>Next js er react framwork. React er framenda javascript virkni sem byggir html síðunar í tölvu notandas sem heimsækir hana. Þetta getur verið mikill kostur ef við
 				erum t.d. að sækja gögn úr api eins og vörur og sýna notanda. Þá getum við bara skrifað react javascript kóða sem seigir vafra notendans
 				hvernig htmlið á að lýta út. Annar kostur við þetta er að síðan byggist í vafra notandans og getur því brugðist við ýmsu og birt notenda snögglega.
+				Einnig er javascript kóðinn sem sér um virkni síðunar skrifaður með efni síðunar samtímis. Við þurfum því ekki að notast við query selectora til að bæta við eða fjarlægja til dæmis
+				CSS klassa. Við getum bara notast við boolean breytur og burgðist við breytingum þeirra í glugga notendans þegar ástand þeirra breytist. Þarna er búið að samnýta virkni og útlit á sem þægilegastan máta.
 				Gallinn við þetta er hinsvegar að þegar notandinn sækir síðuna fær hann bara tómt html með fullt af javascripti sem fyllir svo inní. K .Nextjs gerir okkur kleypt að keyra react
 				hjá hýsandanum og fá þá grunn html skjalið það er síðan sent með react kóða til vafra notandans. Þá fær notandinn grunn html skjalið sem inniheldur
 				mest allt sem hann þarf í grunninn. React byggir svo síðuna í raun aftur onná það sem er komið með tilskipunum sem next js skilur eftir fyrir það.
@@ -118,6 +121,28 @@ export default function Page() {
 				Ef netfangid finnst þá sendi ég mér sjálfum póst annars fást villuboð til notendans. Þessi email validator er þó eitthvað gallaður
 				get tildæmis ekki sent in fyrirspurn með hí netfanginu mínu. SMTP villu og ef ég nota contact@elli.vip gefur hann í skyn að ég sé að
 				gera stafsetning villu. Slekk á þessum athugunum í bili og skoða bara mx,regex og hvert netfangið gæti verið disposable.
+			</p>
+			<h2>Hvernig hefuru samband?</h2>
+			<h3>Taka við gögnum</h3>
+			<p>Notandi fyllir út í formið og smellir á senda. Nú bregst javascript við.
+				React gefur okkur fallið useForm sem passar að allir reitir séu útfylltir sem þarf að að fylla í nafn,fyrirspurn og tölvupóst.
+				Þegar notandinn hefur fyllt út í reitina og send inn þá skoðum við fyrst gögnin.
+				Þar sem fólk getur verið með allskonar nöfn og fyrirspurnir skoðum við aðalega netfangid.
+				Ef uppsetning á netfangi er ekki rétt skilum við villuboðum til notenda. Annars xss hreinsum við gögnin
+				af góðum vana og sendum áfram. Nú tókst að fara í gegnum fallið <code>messagevalidationmiddleware</code>.
+				Þá verður breytan til sem tekur við þeim gögnum. Við setjum því breytuna <code>wait</code> sem
+				<code>true</code> og þá er tómt div látið fylla skjá notendans sem tilkynnir honum um að við séum
+				að reyna að senda skilaboðin. Gögnin eru síðan send á contact api.
+			</p>
+			<a href="https://github.com/Skatturinn/vip/blob/main/src/app/contact/form.tsx">Sjá /contact/form.tsx á github</a>
+			<h3>Senda gögn</h3>
+			<p>Í fyrra skrifi gengum við úr skugga um að gögnin væru með réttu formi. En við vitum ekki hvort
+				tölvupósturinn er til eða ekki. Hann gæti verið bull@rugl.sull og sloppið í gegnum síuna sem skoðar
+				bara hvort hann sé formataður rétt. Við notumst því við annan validator hýsingar megin. Hann var of stangur
+				fyrir minn smekk vildi ekki taka á móti @hi.is netföngum einu sinni. Slökkvum á innslátta villu skoðunum hans þar sem
+				við gerðum það í fyrra skrefi og á smtp athugun. Ef netfnagid stenst regex og mx athugun þá er höldum við áfram.
+				Annars fær notandinn villuboð um að netfangid sé í ólagi. Nodemailer kóðinn er tekin af netinu og lítið breyttur.
+				Nú ætti notandinn að fá skilaboð um að sendinginn hafi tekist og ég póst með fyrirspurninni.
 			</p>
 		</section>
 		<section className={styles.sec} id="honnun">

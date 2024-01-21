@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 export default function Page() {
 	return <>
-		<p className={styles.centertext}>Sendu tölvupóst á netfangið contact@elli.vip <br />
+		<p className={styles.centertext}>Sendu tölvupóst á netfangið <address><a href="mailto:contact@elli.vip">contact@elli.vip</a></address> <br />
 			eða fylltu út í formið hér að neðan</p>
 		<ContactForm />
 	</>
