@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 		type: 'website',
 		siteName: 'Elías Lúðvíksson',
 		description: 'Síða sem ég byggði í þeim tilgangi að sýna færni á sviði vefforitunar ásamt öðrum.',
-		images: '/myndir/eliasludviksson.png'
+		images: '/myndir/eliasludviksson.png',
 	}
 };
 
@@ -33,6 +33,7 @@ export default function RootLayout({
 		<html lang="is">
 			<Head>
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+				<meta name="theme-color" content="#0F0E16" />
 			</Head>
 			<body className={poppins.className}>
 				<a href="#efni" className="sr-only">Tæknibúðin,Beint í efnið.</a>
