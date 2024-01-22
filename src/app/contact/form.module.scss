@@ -6,24 +6,20 @@ $bccolor: #0F0E16;
 	z-index: 10000;
 	position: fixed;
 	cursor: wait;
-	// padding: 20vh 0 0 0;
 	margin: -125px;
 	background: -webkit-linear-gradient($bccolor, transparent);
 
 	&::before {
 		content: 'Reyni að senda';
 		animation-name: loading;
-		animation-duration: 5s;
+		animation-duration: 2s;
 		animation-iteration-count: infinite;
-		// height: 100vh;
 		position: fixed;
-		// padding: 100vw 0;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 3rem;
 		font-weight: 400;
-		// background: -webkit-linear-gradient($bccolor, transparent);
 	}
 }
 

@@ -87,10 +87,6 @@ h6 {
 }
 
 .active {
-
-	// color: $active-color;
-	// opacity: unset;
-	// font-size: 70px;
 	animation-name: appear;
 	animation-duration: 0.1s;
 	grid-row-start: 2 !important;
@@ -102,14 +98,9 @@ h6 {
 	grid-column-end: span 11 !important;
 	opacity: 1 !important;
 
-	// grid-column-end: span 3;
-
-	// box-shadow: #F9FBE9;
 	a {
 		text-transform: capitalize;
 		font-weight: 400;
-		// border-bottom: 1px #F9FBE9 solid;
-		// border-radius: 0.2em;
 		background: -webkit-linear-gradient(white, #F6F7EB, #F9FBE9);
 		background-clip: text;
 		-webkit-background-clip: text;

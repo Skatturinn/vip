@@ -1,7 +1,6 @@
 $ivory: #f6f7ebff;
 
 .cardContainer {
-	// box-sizing: content-box;
 	margin: 5em 0;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -87,28 +86,18 @@ $ivory: #f6f7ebff;
 
 	.card {
 		transition: opacity 1s ease-in-out;
-		// grid-column-end: span 1;
 		width: 250px;
 		height: 350px;
-		// background-color: #dddddd;
-		// background: -webkit-linear-gradient(#F0F0F0, #F6F7EB, );
 		border-radius: 12.5px;
-		// border-radius: 25px;
 		filter: drop-shadow(10px 30px 50px #000000);
 
 		a {
 			box-sizing: border-box;
 			align-self: center;
-			// padding: 12.5px;
 			display: flex;
 			color: #0F0E16;
 			font-weight: 400;
 			font-size: 1em;
-			// display: grid;
-			// padding: 25px;
-			// margin: 10px;
-			// border-top-left-radius: ;
-			// border: 10px solid black;
 			width: 250px;
 			height: 350px;
 		}
@@ -127,9 +116,6 @@ $ivory: #f6f7ebff;
 	scale: 0 1;
 	background-color: #dddddd;
 	border-radius: 12.5px;
-	// border: 3px #ddd solid;
-
-	// display: none;
 }
 
 @keyframes snua {
@@ -154,7 +140,6 @@ $ivory: #f6f7ebff;
 
 @media (max-width: 1050px) {
 	.cardContainer {
-		// grid-template-columns: 1fr;
 		gap: 0;
 
 		.litaspil {
@@ -195,7 +180,6 @@ $ivory: #f6f7ebff;
 
 		.card {
 			justify-self: center;
-			// margin: 0 auto -2.5em;
 		}
 	}
 

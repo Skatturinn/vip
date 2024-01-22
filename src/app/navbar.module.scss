@@ -51,7 +51,6 @@ $bccolor: #0F0E16;
 		grid-column-end: span 2;
 		justify-self: end;
 		align-self: start;
-		// te
 	}
 
 	&:has(li:hover) li:not(:hover) {
@@ -77,19 +76,15 @@ $bccolor: #0F0E16;
 		position: fixed;
 		opacity: 55%;
 		z-index: 1000;
-		// animation-name: fadein;
-		// animation-duration: 0.1s;
 	}
 }
 
 .valmyndNav {
 	display: none;
 	background-color: transparent;
-	// position: absolute;
 	justify-self: end;
 	grid-column-start: 20;
 	border: 0;
-	// position: fixed;
 	transition: opacity 1s ease-in-out;
 	z-index: 1000;
 
@@ -119,7 +114,6 @@ $bccolor: #0F0E16;
 	padding: 0 5%;
 	display: grid;
 	grid-template-columns: repeat(11, minmax(0, 1fr));
-	// gap: 0 126px;
 	gap: 5%;
 	text-transform: lowercase;
 	font-size: 26px;
@@ -200,8 +194,15 @@ $bccolor: #0F0E16;
 
 @media (max-width: 1400px) {
 	.navGrid {
+		gap: 10%;
+	}
+}
+
+
+
+@media (max-width: 1280px) {
+	.navGrid {
 		gap: 5%;
-		// width: 100%;
 
 		:nth-child(2),
 		:nth-child(3),
@@ -209,7 +210,6 @@ $bccolor: #0F0E16;
 		:nth-child(5) {
 			display: none;
 		}
-
 	}
 
 	.valmyndNav {
