@@ -10,6 +10,13 @@ $ivory: #f6f7ebff;
 	width: 100%;
 	max-width: 2298px;
 
+	.litaspil {
+		&:nth-child(3) {
+			grid-column-end: span 2;
+			justify-self: start;
+		}
+	}
+
 	.spil1 {
 		grid-column-start: 2;
 		grid-column-end: span 2;
@@ -150,6 +157,17 @@ $ivory: #f6f7ebff;
 		// grid-template-columns: 1fr;
 		gap: 0;
 
+		.litaspil {
+			&:nth-child(odd) {
+				grid-column: 2;
+				justify-self: center;
+			}
+
+			&:nth-child(even) {
+				grid-column: 3;
+			}
+		}
+
 		.spil4 {
 			grid-column-start: 2;
 			grid-column-end: span 1;
@@ -188,6 +206,12 @@ $ivory: #f6f7ebff;
 	.cardContainer {
 		grid-template-columns: 1fr;
 		gap: 0;
+
+		.litaspil {
+			&:nth-child(n) {
+				grid-column: 1;
+			}
+		}
 
 		:nth-child(n) {
 			grid-column-start: 1;

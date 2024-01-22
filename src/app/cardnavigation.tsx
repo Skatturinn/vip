@@ -104,7 +104,7 @@ type LitaInntak = {
 export function Litaspil({ liti }: LitaInntak) {
 	const listi: Array<Array<JSX.Element>> = [];
 	liti.forEach((stak, nr) => {
-		listi.push([<li className={`${styles.card}`} key={nr}
+		listi.push([<li className={`${styles.card} ${styles.litaspil}`} key={nr}
 			style={{ backgroundColor: stak }}>
 			<p style={{ backgroundColor: '#0F0E16', textAlign: 'center', }}>{stak}</p>
 		</li>])
