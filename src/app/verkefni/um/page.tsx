@@ -26,9 +26,18 @@ export default function Page() {
 				<li><a href="#hysing">6. Hýsing</a></li>
 			</ol>
 		</section>
+		<section>
+			<h1>Orðaforðalisti</h1>
+			<dl>
+				<dt><h2>API</h2></dt>
+				<dd><q>Application program interface</q> <br /> milliliður sem leyfir samskipti á milli tóla.</dd>
+				<dt><h2>CLI</h2></dt>
+				<dd><q>Command line interface</q> <br /> tól sem tekur við skipunum á teksta formi í gegnum terminal.</dd>
+			</dl>
+		</section>
 		<section className={styles.sec} id="uppsetning">
 			<h1>Uppsetning</h1>
-			<p>Node js er javascript <q>js</q> keyrsluumhverfi sem gerir okkur kleift að sækja ýmissa js pakka. Hægt er að sjá alla pakka sem ég hef sótt í package.json skránni á git.
+			<p><dfn>Node.js</dfn> er javascript <q>js</q> CLI keyrsluumhverfi sem gerir okkur kleift að sækja ýmissa js pakka. Hægt er að sjá alla pakka sem ég hef sótt í package.json skránni á git.
 				Þeir hjálpa okkur með uppsetningu á síðunni og virkni hennar.
 				Til að setja þessa síðu upp var skipunin <q><code>npx create-next-app vip</code></q> keyrð. Hún stofnar Next js app möppu. Nextjs er react framework sem
 				einfaldar okkur lífið til muna. Þá er next js búið að ákveða með hverskonar hætti síður og leiðsögn (<q>routing</q>) þeirra á milli skuli vera.
@@ -40,8 +49,8 @@ export default function Page() {
 				og inni þeim er skrá sem heitir page.tsx sem inniheldur viðeigandi síðu.</p>
 			<a href="https://nodejs.org/en/download/current"> Hér er hægt að smella til að sækja Node js </a>
 			<h2>Afhverju Next js</h2>
-			<p>Next js er react framwork. React er framenda javascript virkni sem byggir html síðunar í tölvu notandas sem heimsækir hana. Þetta getur verið mikill kostur ef við
-				erum t.d. að sækja gögn úr api eins og vörur og sýna notanda. Þá getum við bara skrifað react javascript kóða sem seigir vafra notendans
+			<p>Next.js er react framework/umgjörð. React er framenda javascript virkni sem byggir html síðunar í tölvu notandas sem heimsækir hana. Þetta getur verið mikill kostur ef við
+				erum t.d. að sækja gögn úr API eins og vörur og sýna notanda. Þá getum við bara skrifað react javascript kóða sem seigir vafra notendans
 				hvernig htmlið á að lýta út. Annar kostur við þetta er að síðan byggist í vafra notandans og getur því brugðist við ýmsu og birt notenda snögglega.
 				Einnig er javascript kóðinn sem sér um virkni síðunar skrifaður með efni síðunar samtímis. Við þurfum því ekki að notast við query selectora til að bæta við eða fjarlægja til dæmis
 				CSS klassa. Við getum bara notast við boolean breytur og burgðist við breytingum þeirra í glugga notendans þegar ástand þeirra breytist. Þarna er búið að samnýta virkni og útlit á sem þægilegastan máta.
@@ -52,7 +61,7 @@ export default function Page() {
 				er <q>Hafðu samband</q> síðan þar sem formið notast við notenda virkni og í tilvísunar stikunni efst á skjánum sem sýnir notenda hvar hann er stattur.
 				Til að sjá htmlið sem þú færð frá hýsingunni geturu ýtt á F12 eða viðeigandi takka til að fá upp network flipan frá vafranum þínum, sjá mynd.
 			</p>
-			<p>Það er hægt að lýta á það þannig að Next js gefur okkur sniðmát að react forritunar umhverfi til að smíða síðuna sem styður bæði SSR (server side rendering) og CSR (client side rendering).
+			<p>Það er hægt að lýta á það þannig að Next.js gefur okkur sniðmát að react forritunar umhverfi til að smíða síðuna sem styður bæði SSR (server side rendering) og CSR (client side rendering).
 			</p>
 			<figure className={styles.synidmi}>
 				<Image
@@ -92,7 +101,7 @@ export default function Page() {
 				á að taka út myndir í hvaða upplausn sem er. Við tökum því myndir af teikningasettinu í nægilega hárri upplausn og eftir smá litabreytinga og
 				stúss erum við komnir með .png myndir sem eiga heima hérna. Vistum þær sem litlar png myndir. En þetta er fremur þurrt. Listi af myndum með málsetningum. Við getum gert betur.
 				Three js hefur vakið áhuga minn mikið nýlega og er react með útfærslu af því í boði. Við sækjum því viðeigandi pakka með <code> npm i @react-three/drei @react-three/fiber</code>.
-				Ég skoða sýnidæmi frá next um notkun á three js og sé að þeir notast við .glb fyrir modelin. Viti menn Inventor styður þetta. Frábært.
+				Ég skoða sýnidæmi frá next um notkun á three.js og sé að þeir notast við .glb fyrir modelin. Viti menn Inventor styður þetta. Frábært.
 				Eftir smá puð næ ég loks að koma kubbnum inn á síðuna en maður sér í raun ekkert. Hann gæti svo gott sem verið tvívíddur.
 				Annað vandamál kubburinn tekur upp svo stóran hluta síðunar að í hvert skipti sem ég ætla að skrolla þá stækka ég bara og minnka kubbinn.
 				Slökkvum á allri virkni innan gluggans í bili. Byrjum á að laga útlitið. Til þess að gera það þurfum við að breyta efninu sem hann er úr.
@@ -122,13 +131,13 @@ export default function Page() {
 		<section className={styles.sec} id="samband">
 			<h1>Hafðu samband</h1>
 			<p>Þetta er einn mikilvægasti hlutinn á allri síðunni. Það að hafa form sem þú getur útfilt til að hafa samband er lykilatriði í heimasíðu síðu.
-				Það er til mikið efni um það hvernig er hægt að setja þetta upp. Fyrsta tilraun gengur ágættlega þar til við komum að api hlutanum. Kemur í ljós
-				að þetta hefur breyst frekar nýlega. Smá hausverkur en það er hægt að finna út úr þessu. Api eiga að fylga reglunni src/app/api/slóð/route.ts
-				þar sem slóð er umbeðið api. Þetta líkist þá síðunum í app router sem hafa alltaf page.tsx fyrir hverja möppu. Nú þegar við erum komin með
-				gögnin viljum við senda þau áfram. Nodemailer lausnin hljómar best þar sem ég nenni ekki að skrá mig á einhvern lista hjá api út í bæ.
+				Það er til mikið efni um það hvernig er hægt að setja þetta upp. Fyrsta tilraun gengur ágættlega þar til við komum að API hlutanum. Kemur í ljós
+				að þetta hefur breyst frekar nýlega. Smá hausverkur en það er hægt að finna út úr þessu. API eiga að fylga reglunni src/app/API/slóð/route.ts
+				þar sem slóð er umbeðið API. Þetta líkist þá síðunum í app router sem hafa alltaf page.tsx fyrir hverja möppu. Nú þegar við erum komin með
+				gögnin viljum við senda þau áfram. Nodemailer lausnin hljómar best þar sem ég nenni ekki að skrá mig á einhvern lista hjá API út í bæ.
 				Sækjum nodemailer <code>npm i nodemailer</code>. Óli vefforitari ítrekaði þó mikilvægi þess að sía gögninn sem maður tekur við. Set upp
 				einfaldan validator notenda megin sem kannar hvort netfangið sé með réttu móti. Leyfi þá notendanum að senda inn gögninn. Les úr þeim.
-				Athuga hvort netfangið sé till í raun og veru með öðrum pakka frá node js. Sjá util möppu á git og einnig api/contact/route.ts.
+				Athuga hvort netfangið sé till í raun og veru með öðrum pakka frá Node.js. Sjá util möppu á git og einnig api/contact/route.ts.
 				Ef netfangid finnst þá sendi ég mér sjálfum póst annars fást villuboð til notendans. Þessi email validator er þó eitthvað gallaður
 				get tildæmis ekki sent in fyrirspurn með hí netfanginu mínu. SMTP villu og ef ég nota contact@elli.vip gefur hann í skyn að ég sé að
 				gera stafsetning villu. Slekk á þessum athugunum í bili og skoða bara mx,regex og hvert netfangið gæti verið disposable.
@@ -143,7 +152,7 @@ export default function Page() {
 				af góðum vana og sendum áfram. Nú tókst að fara í gegnum fallið <code>messagevalidationmiddleware</code>.
 				Þá verður breytan til sem tekur við þeim gögnum. Við setjum því breytuna <code>wait</code> sem
 				<code>true</code> og þá er tómt div látið fylla skjá notendans sem tilkynnir honum um að við séum
-				að reyna að senda skilaboðin. Gögnin eru síðan send á contact api.
+				að reyna að senda skilaboðin. Gögnin eru síðan send á contact API.
 			</p>
 			<a href="https://github.com/Skatturinn/vip/blob/main/src/app/contact/form.tsx">Sjá /contact/form.tsx á github</a>
 			<h3>2. Senda gögn</h3>
@@ -201,7 +210,7 @@ export default function Page() {
 		</section>
 		<section className={styles.sec} id="hysing">
 			<h1>Hýsing</h1>
-			<p>Þessi síða er í hýsingu hjá Vercel útgefanda Next js. Einföld tenging við github repo. Svo bara ýta á build. Reyndar var ég óvart með <q>gæsalappir</q> inní htmlinu smá obbó og exportaði font stylingunum úr layout.
+			<p>Þessi síða er í hýsingu hjá Vercel útgefanda Next.js. Einföld tenging við github repo. Svo bara ýta á build. Reyndar var ég óvart með <q>gæsalappir</q> inní htmlinu smá obbó og exportaði font stylingunum úr layout.
 				Ekkert mál að laga það, baddabing baddabúm síðan er komin í loftið á <a href="elli.vip">elli.vip</a></p>
 		</section>
 	</>

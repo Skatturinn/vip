@@ -10,7 +10,9 @@ $ivory: #f6f7ebff;
 	max-width: 2298px;
 
 	.litaspil {
-		&:nth-child(3) {
+
+		&:nth-child(3),
+		&:nth-child(6) {
 			grid-column-end: span 2;
 			justify-self: start;
 		}
