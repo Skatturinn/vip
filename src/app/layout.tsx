@@ -8,14 +8,21 @@ import { Fotur } from "./fotur";
 export const metadata: Metadata = {
 	title: "Elías Lúðvíksson",
 	description: "Elias Ludviksson / Elli.vip",
-	authors: { name: 'Elías Lúðvíksson', url: '' },
+	authors: { name: 'Elías Lúðvíksson', url: 'https://www.elli.vip/elias-ludviksson' },
 	openGraph: {
 		locale: 'is',
-		title: 'Heimasíða Elíasar Lúðvíkssonar',
+		title: 'Elías Lúðvíkssonar',
 		type: 'website',
 		siteName: 'Elías Lúðvíksson',
-		description: 'Síða sem ég byggði í þeim tilgangi að sýna færni á sviði vefforitunar ásamt öðrum.',
+		description: 'Síða sem Elías Lúðvíksson byggði í þeim tilgangi að sýna færni sína á sviði vefforitunar ásamt öðrum.',
 		images: '/myndir/eliasludviksson.png',
+		url: 'https://www.elli.vip/'
+	},
+	twitter: {
+		site: 'Elías Lúðvíksson heimasíða',
+		creator: 'Elías Lúðvíksson',
+		title: 'Elías Lúðvíksson',
+		description: 'Síða sem Elías Lúðvíksson byggði í þeim tilgangi að sýna færni sína á sviði vefforitunar ásamt öðrum.',
 	}
 };
 
