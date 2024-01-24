@@ -77,11 +77,12 @@ export function NavBar() {
 					<Link href="/">
 						<Image
 							src="/logosvgwhite.svg"
-							alt="Elías Lúðviksson/Elli.vip logo"
+							alt="Elías Lúðviksson logo"
 							width="32"
 							height="52"
 							className={NavButton ? '' : h ? styles.logoHomeNav__fixed : styles.logoHomeNav}
 						/>
+						<h1 className={styles.none}>Elías Lúðvíksson</h1>
 					</Link></li>
 				<li className={isCurrent('/verkefni')} onClick={NL}><Link href='/verkefni'>Verkefni</Link></li>
 				<li className={isCurrent('/tolvuteikningar')} onClick={NL}><Link href='/tolvuteikningar'> Tölvuteikningar</Link></li>

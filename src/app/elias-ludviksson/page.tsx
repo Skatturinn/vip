@@ -4,6 +4,8 @@ import { CardLayout } from "../cardnavigation";
 export default function Page() {
 	return <>
 		<h1>Elías Lúðvíksson</h1>
+		<p>Þessi síða inniheldur stutta lýsingu um Elías Lúðvíksson. <br />
+			Tilgangur hennar er að vera sýnilegur á leitarvefjum þegar fólk leitar af <q>Elías Lúðvíksson</q></p>
 		<section className={styles.sec}>
 			<h2>Um mig og ferilskrá</h2>
 			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur.</p>
