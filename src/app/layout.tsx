@@ -38,9 +38,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="is">
-			<Head>
-				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-			</Head>
 			<body className={poppins.className}>
 				<a href="#efni" className="sr-only">Tæknibúðin,Beint í efnið.</a>
 				<NavBar />
