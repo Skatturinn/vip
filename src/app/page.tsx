@@ -28,7 +28,7 @@ export default function Home() {
 
 			</div>
 			<Link
-				href={'/Elias-Ludviksson'}
+				href={'/elias-ludviksson'}
 				className={styles.ummig}
 			>
 				Um mig
