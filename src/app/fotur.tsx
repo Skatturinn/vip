@@ -15,7 +15,8 @@ export function Fotur() {
 						className={styles.fotur__mynd}
 					/>
 					<figcaption className={styles.fotur__caption}>
-						Elías Lúðvíksson
+						Elías Lúðvíksson <br />
+						<div className={styles.hide}>Um mig</div>
 					</figcaption>
 				</figure>
 			</Link>
