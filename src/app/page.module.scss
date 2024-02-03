@@ -48,11 +48,19 @@ $hvitur: #fff;
 	width: fit-content;
 	margin: 0 auto;
 	background-color: $bccolor;
+	border: 1px black solid;
+	transition: border 0.5s ease-out;
 
+	&:hover {
+		transition: border 0.5s ease-in;
+		border: 1px white solid;
+	}
+
+	// border: 1px white solid;
 	padding: 0.5em 1em;
 	border-radius: 1em;
 	// color: $bccolor;
 	// font-weight: 400;
-	font-size: 1.5em;
-	filter: drop-shadow(0 0 75px #000000);
+	font-size: 1.25em;
+	filter: drop-shadow(0 25px 25px #000000);
 }
