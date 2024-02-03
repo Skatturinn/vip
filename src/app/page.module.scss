@@ -1,4 +1,6 @@
 $ivory: #f6f7ebff;
+$bccolor: #0F0E16;
+$hvitur: #fff;
 
 .forsidumynd {
 	padding: 0 0 0 10em;
@@ -39,4 +41,14 @@ $ivory: #f6f7ebff;
 	100% {
 		opacity: 100%;
 	}
+}
+
+.ummig {
+
+	background-color: white;
+	padding: 0.5em 1em;
+	border-radius: 1em;
+	color: $bccolor;
+	font-weight: 400;
+	filter: drop-shadow(10px 30px 50px #000000);
 }

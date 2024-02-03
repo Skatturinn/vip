@@ -35,6 +35,6 @@ export default function Page() {
 
 			</p>
 			<h2>Um mig og ferilskrá</h2>
-			<a href="/elias-ludviksson">Um mig síða</a>
+			<a href="/Elias-Ludviksson">Um mig síða</a>
 		</section></>
 }

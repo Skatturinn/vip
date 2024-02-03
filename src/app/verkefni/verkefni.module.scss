@@ -2,7 +2,7 @@
 	padding: 2rem 0;
 	width: 80%;
 	font-size: 16px;
-	max-width: 1500px;
+	max-width: 800px;
 
 	dl {
 		dd {
@@ -15,7 +15,7 @@
 		opacity: 1;
 		border: #fff 1px solid;
 		border-radius: 1em;
-		padding: 0 1em;
+		padding: 0.1em 1em;
 		font-weight: 400;
 		// text-decoration: dashed;
 	}
@@ -103,4 +103,8 @@
 
 		max-width: 1900px;
 	}
+}
+
+.hlekkur {
+	border: 1px white solid;
 }

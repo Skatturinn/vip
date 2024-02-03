@@ -1,14 +1,25 @@
 import styles from "../verkefni/verkefni.module.scss"
 import { CardLayout } from "../cardnavigation";
+import Image from "next/image";
+import elias from "./elias.module.scss"
 
 export default function Page() {
 	return <>
-		<h1>Elías Lúðvíksson</h1>
-		<p>Þessi síða inniheldur stutta lýsingu um Elías Lúðvíksson. <br />
-			Tilgangur hennar er að vera sýnilegur á leitarvefjum þegar fólk leitar af <q>Elías Lúðvíksson</q></p>
+		<div className={elias.heading}>
+			<Image
+				src="/myndir/ummig.jpg"
+				alt="hér er mynd af Elíasi þegar hann var ungur og fallegur"
+				width="1425" height="1522"
+				className={elias.profile}
+			/>
+			<h1>Elías Lúðvíksson</h1>
+			<p>Þessi síða inniheldur stutta lýsingu um mig.</p>
+		</div>
 		<section className={styles.sec}>
 			<h2>Um mig og ferilskrá</h2>
-			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur.</p>
+			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur. Hef stundað myndbands og hljóðgerð eins og annar hver maður með netsamband
+				á tuttugustu á fyrstu öldinni. Hef þó alltaf reynd að fara lengra gera betur og meira.
+			</p>
 			<p>Fyrir ýtarlegri upplýsingar hafðu samband með því að senda póst á contact@elli.vip eða með því að fylla í formið á <br />
 				<a href="/contact">hafðu samband</a> .</p>
 			<h3>Starfsreynsla</h3>
@@ -30,6 +41,8 @@ export default function Page() {
 				<dd>í vinnslu</dd>
 			</dl>
 		</section>
-		<h1>Sjá efni eftir mig inná þessari síðu</h1>
-		<CardLayout spil={[1, 2, 3]} class_string={styles.forsiduspil} /></>
+		<aside className={styles.sec}>
+			<a href="/#spil">Sjá efni eftir mig inná þessari síðu</a>
+		</aside>
+	</>
 }

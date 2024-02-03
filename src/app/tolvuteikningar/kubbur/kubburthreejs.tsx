@@ -4,8 +4,8 @@ import { OrbitControls, useGLTF } from '@react-three/drei'
 // import { useControls } from 'leva'
 import Image from "next/image";
 import styles from "./ttkubbur.module.scss"
-import { hlutur } from "../foll_fyrir_byrtingu"
-import { tolvuteikningar, Model } from '../foll_fyrir_byrtingu';
+import { hlutur } from "../../util/foll_fyrir_byrtingu"
+import { tolvuteikningar, Model } from '../../util/foll_fyrir_byrtingu';
 import { useState } from 'react';
 
 export type ihlutir = {

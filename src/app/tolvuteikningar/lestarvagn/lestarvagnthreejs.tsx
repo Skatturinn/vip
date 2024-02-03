@@ -1,6 +1,6 @@
 'use client'
 import { Canvas } from "@react-three/fiber";
-import { tolvuteikningar, Model } from "../foll_fyrir_byrtingu"
+import { tolvuteikningar, Model } from "../../util/foll_fyrir_byrtingu"
 import { ihlutir } from "../kubbur/kubburthreejs";
 import { OrbitControls } from "@react-three/drei";
 import styles from "./ttlestarvagn.module.scss";

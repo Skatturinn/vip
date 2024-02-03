@@ -109,5 +109,5 @@ export function Litaspil({ liti }: LitaInntak) {
 			<p style={{ backgroundColor: '#0F0E16', textAlign: 'center', }}>{stak}</p>
 		</li>])
 	})
-	return <ul className={`${styles.cardContainer}`}>{listi}</ul>
+	return <ul className={`${styles.cardContainer}`} >{listi}</ul>
 }

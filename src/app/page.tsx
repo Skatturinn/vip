@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.scss";
 import { NavBar } from "./navbar";
 import { CardLayout } from "./cardnavigation";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -21,8 +22,17 @@ export default function Home() {
 						className={styles.krot}
 					/>
 				</div>
-				<CardLayout spil={[1, 2, 3]} class_string={styles.forsiduspil} />
+				<div id="spil">
+					<CardLayout spil={[1, 2, 3]} class_string={styles.forsiduspil} />
+				</div>
+
 			</div>
+			<Link
+				href={'/Elias-Ludviksson'}
+				className={styles.ummig}
+			>
+				Um mig
+			</Link>
 		</>
 	);
 }
