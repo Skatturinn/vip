@@ -22,17 +22,17 @@ export default function Home() {
 						className={styles.krot}
 					/>
 				</div>
+				<Link
+					href={'/elias-ludviksson'}
+					className={styles.ummig}
+				>
+					Um mig
+				</Link>
 				<div id="spil">
 					<CardLayout spil={[1, 2, 3]} class_string={styles.forsiduspil} />
 				</div>
 
 			</div>
-			<Link
-				href={'/elias-ludviksson'}
-				className={styles.ummig}
-			>
-				Um mig
-			</Link>
 		</>
 	);
 }

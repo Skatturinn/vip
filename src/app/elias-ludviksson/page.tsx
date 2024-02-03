@@ -48,10 +48,10 @@ export default function Page() {
 				<li>Next.js</li>
 				<li>Node.js</li>
 				<li>React</li>
+				<li>Html</li>
 				<li>Javascript</li>
 				<li>CSS</li>
 				<li>SCSS</li>
-				<li>Html</li>
 			</ul>
 			<h4>Gagnavinnsla og umsjón</h4>
 			<ul className={elias.hbflisti}>
