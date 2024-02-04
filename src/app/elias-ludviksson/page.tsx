@@ -8,7 +8,7 @@ export default function Page() {
 		<div className={elias.heading}>
 			<Image
 				src="/myndir/ummig.jpg"
-				alt="hér er mynd af Elíasi þegar hann var ungur og fallegur"
+				alt="Elías Lúðvíksonn andlitsmynd"
 				width="1425" height="1522"
 				className={elias.profile}
 			/>
@@ -58,6 +58,7 @@ export default function Page() {
 				<li>Matlab</li>
 				<li>Rstudio</li>
 				<li>Python</li>
+				<li>psql</li>
 				<li>DK</li>
 				<li>Active directory</li>
 			</ul>
