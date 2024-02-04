@@ -1,5 +1,5 @@
 import styles from '../myndbond.module.scss'
-import bg from '/public/myndbond_myndir/svonerbg4.png'
+import bg from '/public/myndbond_myndir/svonerbgJ.jpg'
 
 
 export default function Page() {

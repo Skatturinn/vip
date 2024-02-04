@@ -1,5 +1,5 @@
 import styles from '../myndbond.module.scss'
-import bg from '/public/myndbond_myndir/mtturbg2.png'
+import bg from '/public/myndbond_myndir/mtturbgJ.jpg'
 
 
 export default function Page() {
