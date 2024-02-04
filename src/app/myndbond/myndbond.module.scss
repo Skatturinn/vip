@@ -4,10 +4,10 @@ $hvitur: #fff;
 .mttur {
 	margin: 2em;
 	height: 225vw;
-	max-height: 4320px;
+	height: 4320px;
 	max-width: 1920px;
 	width: 100vw;
-	background-size: 100%;
+	background-size: cover;
 	background-position: top;
 	background-repeat: no-repeat;
 	display: grid;
@@ -29,16 +29,20 @@ $hvitur: #fff;
 	width: fit-content;
 	display: flex;
 	flex-direction: column;
-	// max-width: 560px;
+	min-width: 560px;
+	max-width: 100vw;
+	align-self: center;
+	justify-self: center;
+
 	grid-row: 2;
-	// text-align: center;
 
 	h1,
 	h2,
 	h3,
 	p {
 		width: 560px;
-		// margin: 0 auto;
+		max-width: 100vw;
+
 	}
 
 	p {
@@ -46,6 +50,5 @@ $hvitur: #fff;
 		background-color: $hvitur;
 		padding: 1em;
 		border-radius: 1em;
-		// margin: 0.5em 0;
 	}
 }

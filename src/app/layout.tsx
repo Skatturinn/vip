@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Poppins } from "next/font/google";
 import { NavBar } from "./navbar";
 import { Fotur } from "./fotur";
+import styles from "./layout.module.scss"
 
 export const metadata: Metadata = {
 	title: "Elías Lúðvíksson",
@@ -38,7 +39,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="is">
-			<body className={poppins.className}>
+			<body className={`${poppins.className} ${styles.lgrid}`}>
 				<a href="#efni" className="sr-only">Elías Lúðvíksson, Beint í efnið.</a>
 				<NavBar />
 				<main id="efni">{children}</main>
