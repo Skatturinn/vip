@@ -26,7 +26,7 @@ $hvitur: #fff;
 }
 
 .about {
-	margin: 0 auto;
+	margin: 50% auto;
 	align-content: center;
 	width: fit-content;
 	display: flex;
@@ -35,8 +35,8 @@ $hvitur: #fff;
 	max-width: 100vw;
 	align-self: center;
 	justify-self: center;
-
 	grid-row: 2;
+	backdrop-filter: bur(10em);
 
 	h1,
 	h2,
@@ -44,7 +44,6 @@ $hvitur: #fff;
 	p {
 		width: 560px;
 		max-width: 100vw;
-
 	}
 
 	p {
