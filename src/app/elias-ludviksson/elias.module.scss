@@ -1,13 +1,47 @@
+.heading {
+	text-align: center;
+	filter: drop-shadow(10px 30px 50px #000000);
+
+	.profile {
+		&:hover {
+			// background-color: white;
+		}
+	}
+}
+
 .profile {
 	max-width: 128px;
 	object-fit: scale-down;
 	height: fit-content;
 	border-radius: 1em;
+
+	&:hover,
+	&:active,
+	&:focus-visible {
+		+figcaption {
+			.dagsetning {
+				position: absolute;
+				left: 1em;
+				right: 1em;
+				margin: -1em 0 0;
+				opacity: 1;
+				transform: translate(0, -1em);
+				transition: opacity 1s ease-in, transform 1s;
+			}
+		}
+	}
 }
 
-.heading {
-	text-align: center;
-	filter: drop-shadow(10px 30px 50px #000000);
+.dagsetning {
+	font-size: 0.75em;
+	opacity: 0;
+	transition: opacity 0.25s ease-in, transform 1s;
+	display: inline;
+	position: absolute;
+	left: 1em;
+	right: 1em;
+	margin: -1em 0 0;
+	transform: translate(0, -2em)
 }
 
 .hbflisti {

@@ -5,16 +5,19 @@ import elias from "./elias.module.scss"
 
 export default function Page() {
 	return <>
-		<div className={elias.heading}>
+		<figure className={elias.heading}>
 			<Image
-				src="/myndir/ummig.jpg"
-				alt="Elías Lúðvíksonn andlitsmynd"
+				src="/myndir/elias.jpg"
+				alt="Andlitsmynd af Elíasi Lúðvíkssyni"
 				width="1425" height="1522"
 				className={elias.profile}
 			/>
-			<h1>Elías Lúðvíksson</h1>
-			<p>Þessi síða inniheldur stutta lýsingu um mig.</p>
-		</div>
+			<figcaption>
+				<time dateTime="2020-09-30" className={elias.dagsetning}>30/9/2020</time>
+				<h1>Elías Lúðvíksson</h1>
+				<p>Þessi síða inniheldur stutta lýsingu um mig.</p>
+			</figcaption>
+		</figure>
 		<section className={styles.sec}>
 			<h2>Um mig </h2>
 			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur. Hef stundað myndbands og hljóðgerð eins og annar hver maður með netsamband
