@@ -27,6 +27,7 @@ export default function Page() {
 					src="https://www.youtube.com/embed/mfsZpjpIBpU?si=N9VPaq-aAGNGrA0Y"
 					title="YouTube video player"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				></iframe>
+					allowFullScreen
+				/>
 			</div></div></>
 }

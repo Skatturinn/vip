@@ -17,8 +17,9 @@ export default function Page() {
 				<iframe width="560" height="315"
 					src="https://www.youtube.com/embed/U__oETJFaNw?si=701dd4dPhjeT3i9f"
 					title="YouTube video player"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" >
-				</iframe>
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowFullScreen
+				/>
 			</div>
 		</div></>
 }

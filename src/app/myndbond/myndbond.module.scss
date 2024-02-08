@@ -8,7 +8,6 @@ $hvitur: #fff;
 	max-width: 1920px;
 	width: 100vw;
 	margin-top: -125px;
-	z-index: -100;
 	background-size: cover;
 	background-position: top;
 	background-repeat: no-repeat;
@@ -23,6 +22,10 @@ $hvitur: #fff;
 	display: flex;
 	width: 100%;
 	height: 100%;
+
+	iframe {
+		border: 0;
+	}
 }
 
 .about {
