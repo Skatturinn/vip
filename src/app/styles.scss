@@ -87,6 +87,7 @@ h6 {
 }
 
 .active {
+	z-index: 10;
 	animation-name: appear;
 	animation-duration: 0.1s;
 	grid-row-start: 2 !important;
