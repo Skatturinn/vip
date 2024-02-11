@@ -24,6 +24,12 @@ export default function Page() {
 			</div>
 			<div className={styles.video}>
 				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/jLNT0xyI-9c?si=fTUT-U0C87mxcJ91"
+					title="YouTube video player"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowFullScreen
+				/>
+				<iframe width="560" height="315"
 					src="https://www.youtube.com/embed/mfsZpjpIBpU?si=N9VPaq-aAGNGrA0Y"
 					title="YouTube video player"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
