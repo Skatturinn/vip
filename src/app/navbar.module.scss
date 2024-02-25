@@ -75,7 +75,6 @@ $bccolor: #0F0E16;
 .logoHomeNav {
 	opacity: 55%;
 
-
 	&__fixed {
 		position: fixed;
 		opacity: 55%;
@@ -109,8 +108,11 @@ $bccolor: #0F0E16;
 	position: fixed;
 	z-index: 10000;
 	background: -webkit-linear-gradient($bccolor, transparent);
-	animation-name: dropdown;
-	animation-duration: 0.25s;
+
+	:not(:first-child) {
+		animation-name: dropdown;
+		animation-duration: 0.25s;
+	}
 }
 
 .navWindow {
