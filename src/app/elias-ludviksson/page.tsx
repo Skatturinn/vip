@@ -20,7 +20,7 @@ export default function Page() {
 		</figure>
 		<section className={styles.sec}>
 			<h2>Um mig </h2>
-			<p>Ég er Elías Lúðvíksson, áhuga vefforitari og léttur hansklaufi þó ég seigi sjálfur. Hef stundað myndbands og hljóðgerð eins og annar hver maður með netsamband
+			<p>Ég er Elías Lúðvíksson, áhuga vefforritari og léttur hansklaufi þó ég seigi sjálfur. Hef stundað myndbands og hljóðgerð eins og annar hver maður með netsamband
 				á tuttugustu og fyrstu öldinni. Hef þó alltaf reynt að fara lengra, gera betur og meira.
 			</p>
 			<p>Fyrir ýtarlegri upplýsingar hafðu samband með því að senda póst á contact@elli.vip eða með því að fylla í formið á
@@ -46,7 +46,7 @@ export default function Page() {
 			</dl>
 			<h3>Hugbúnaðarfærni</h3>
 			<p>Kann almennt að læra sjálfstætt á tölvuforrit eftir þörf.</p>
-			<h4>Vefforitun</h4>
+			<h4>Vefforritun</h4>
 			<ul className={elias.hbflisti}>
 				<li>Next.js</li>
 				<li>Node.js</li>

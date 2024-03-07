@@ -135,7 +135,7 @@ export default function Page() {
 				að þetta hefur breyst frekar nýlega. Smá hausverkur en það er hægt að finna út úr þessu. API eiga að fylga reglunni src/app/API/slóð/route.ts
 				þar sem slóð er umbeðið API. Þetta líkist þá síðunum í app router sem hafa alltaf page.tsx fyrir hverja möppu. Nú þegar við erum komin með
 				gögnin viljum við senda þau áfram. Nodemailer lausnin hljómar best þar sem ég nenni ekki að skrá mig á einhvern lista hjá API út í bæ.
-				Sækjum nodemailer <code>npm i nodemailer</code>. Óli vefforitari ítrekaði þó mikilvægi þess að sía gögninn sem maður tekur við. Set upp
+				Sækjum nodemailer <code>npm i nodemailer</code>. Óli vefforritari ítrekaði þó mikilvægi þess að sía gögninn sem maður tekur við. Set upp
 				einfaldan validator notenda megin sem kannar hvort netfangið sé með réttu móti. Leyfi þá notendanum að senda inn gögninn. Les úr þeim.
 				Athuga hvort netfangið sé till í raun og veru með öðrum pakka frá Node.js. Sjá util möppu á git og einnig api/contact/route.ts.
 				Ef netfangid finnst þá sendi ég mér sjálfum póst annars fást villuboð til notendans. Þessi email validator er þó eitthvað gallaður
@@ -170,7 +170,7 @@ export default function Page() {
 			<Litaspil liti={['#F9FBE9', '#F6F7EB', '#ffffff', '#dddddd', '#0F0E16', '#000000',]} />
 			<p>Litavalið var einfalt nýverið hef ég verið mjög hrifin af hugmyndinni <q>navy and platinum pink</q> og átti bleikur að vera áherslu liturinn til að byrja með
 				en það kom illa fyrir augu. Þetta er þá navy,white og latte litir aðalega. Ég hef ítrekað verið að notast við navy litað letur á létt latte bakgrunn í
-				skilaverkenfum í vefforitun. Ég opnaði upp figma hendi inn mynd og hinu sígilda poppins letri og var kominn með grunninn að hönnuninn eins og hún leggur sig í dag.
+				skilaverkenfum í vefforritun. Ég opnaði upp figma hendi inn mynd og hinu sígilda poppins letri og var kominn með grunninn að hönnuninn eins og hún leggur sig í dag.
 			</p>
 			<figure className={styles.synidmi}>
 				<Image
