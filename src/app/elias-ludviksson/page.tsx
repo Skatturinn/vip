@@ -53,6 +53,7 @@ export default function Page() {
 				<li>React</li>
 				<li>Html</li>
 				<li>Javascript</li>
+				<li>Typescript</li>
 				<li>CSS</li>
 				<li>SCSS</li>
 			</ul>
