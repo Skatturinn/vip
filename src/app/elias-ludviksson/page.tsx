@@ -70,6 +70,7 @@ export default function Page() {
 			<ul className={elias.hbflisti}>
 				<li>Autodesk Inventor</li>
 				<li>AutoCAD</li>
+				<li>Fusion</li>
 				<li>Solidworks</li>
 				<li>Blender</li>
 			</ul>
