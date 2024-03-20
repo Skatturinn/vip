@@ -138,12 +138,6 @@ export default function Page() {
 					height={520}
 					width={800}
 				/>
-				<Image
-					src={"/vel608g/kerfbbb.jpg"}
-					alt="Mynd 3 af kerfmælingum"
-					height={520}
-					width={800}
-				/>
 				<figcaption>Kerfmælingar</figcaption>
 			</figure>
 			Til að finna kerfið sem er í raun breiddin á leisernum þurfum við að mæla muninn á gatinu og bitanu sem kemur út úr gatinu eftir skurðin.
