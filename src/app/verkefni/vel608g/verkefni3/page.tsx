@@ -69,7 +69,7 @@ export default function Page() {
 		</section>
 		<section className={styles.sec}>
 			<h2>3-vídd skönnunn</h2>
-			ég notaðist við photogrammetry forrit sem gallast meshroom. Það virkar þannig
+			ég notaðist við photogrammetry forrit sem gallast <a href="https://alicevision.org/#meshroom">meshroom</a>. Það virkar þannig
 			að þú setur inn í það fullt af myndum. Það greinir svo hreyfingu út frá myndunum
 			og út frá því færðu dýpt sem gefur þér að lokum model.
 			<figure className={styles.synidmi}>
