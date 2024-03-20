@@ -26,14 +26,129 @@ export default function Page() {
 				eitt né neitt. Hvað standa þeir fyrir og stend ég með því? Svari hver fyrir sig en að líma min eigin límmiða.
 				Það get ég og nú hef ég gert. Takk fyrir mig.
 			</p>
-			<h2></h2>
-			{/* <figure className={styles.synidmi}>
-				<image
-					src="https://fab.cba.mit.edu/classes/863.21/EECS/people/jan/images/0_joints.png"
-					alt="Mynd sem sýnir gerðir af press fit fyrir laserskornar plötur"
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/v2_limmidi.jpg"}
+					alt="Mynd sem sýnir límmiðanna á fartölvunni minni."
+					height={520}
+					width={800}
 				/>
-			</figure> */}
-		</section>
+			</figure>
+			<h2>Parametrísk hönnun fyrir pressfit</h2>
+			Verkefnið felst í því að hanna þrívíðan hlut sem á að vera settur saman með pressfit tengingum. Á að minnstakosti þrem
+			stöðum og helst með þrem mismunandi gerðum af tengingum. Hönnunin þarf að vera parametrískt því þykkt plötu sem á að notast
+			við í pressfitinu er breytileg og hefur það áhrif á festingarnar sem notast við þykktina.
+			<h3>Hvað er pressfit</h3>
+			Pressfit er tenging sem helst saman að mestu úr núningi og spennu. Ég fann mynd af netinu þar sem sýnt er mynd af mismunandi
+			pressfit tengingum.
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/0_joints.jpg"}
+					alt="Mynd sem sýnir gerðir af press fit fyrir laserskornar plötur"
+					height={520}
+					width={800}
+				/>
+				<figcaption><a href="https://fab.cba.mit.edu/classes/863.21/EECS/people/jan/images/0_joints.png">Gerðir af pressfitum.</a></figcaption>
+			</figure>
+			Af myndinni valdi ég að nota press-fit, finger og wedge tengingarnar.
+			<h3>Hönnuninn</h3>
+			Mig vantar eitthvað til að henga herða tré á til að geyma hinar ýmsu flíkur í loftinu.
+			Með það til hliðsjónar að við þurfum að hafa þrjá tengi punkta og helst þrjár mismunandi tengingar.
+			Hanna ég einhverskonar hangi apparat úr 4 teikningum með tengingunum sem ég valdi af fyrri mynd.
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/paragif.gif"}
+					alt="Gif sem sýnir teikningar og hluti í fusion"
+					height={520}
+					width={800}
+				/>
+				<figcaption>Teikningar fyrir samsetningu</figcaption>
+			</figure>
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/parametrar.png"}
+					alt="Mynd sem sýnir parametra notkun í teikningum"
+					height={520}
+					width={800}
+				/>
+				<figcaption><a href="https://www.youtube.com/watch?v=yhHhSVoL1RQ&t=2s">Notkun á parametrum í teikningum.</a></figcaption>
+			</figure>
+			Ég passaði að hafa allar lengdir byggðar á parametrum. Til að fá svo DXF úr fusion með tilliti til kerfsins sem
+			ég fann notaðist ég við <a href="https://www.youtube.com/watch?v=D1Btaqhog9E">myndband frá fablab akureyri</a>
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/lasercut.png"}
+					alt="Mynd sem sýnir íhluti samsetningarnar lagaðar út."
+					height={520}
+					width={800}
+				/>
+				<figcaption>Íhlutum raðar fyrir leiser skurð.</figcaption>
+			</figure>
+			Þegar ég var komin með útlínurnar af íhlutunum í inkscape þurfti ég bara að stilla document properties í 500mm*500mm.
+			Setja line thickness sem 0.02 og ýta á ctrl+p fyrir print. Þá þurfti að kveikja á gasinu og skera út hlutin.
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/skorid.jpg"}
+					alt="Mynd sem sýnir plötu sem er búið að skera þrisvar úr"
+					height={520}
+					width={800}
+				/>
+				<figcaption>Fyrirgefðu gamli.</figcaption>
+			</figure>
+			Ég er víst ekki nógu lúnkinn með skífumæli eða plöturnar eru ekki jafn þykkar, þú ræður. En eftir að reyna að setja allt saman
+			þrisvar og mæla þykktina á plötunni í hvert skipti þá komst ég að því að einfaldast er að setja saman finger tengingar. Þær eru
+			ekki mjög næmar fyrir þykkt plötunar. Bestu tenginarnar voru pressfit og einnig hægt að koma þeim saman en þó næmar fyrir þykktinni.
+			Wedge tenging voru svoddan mistök og er hún gífurlega næm fyrir mælingum á þykkt. Skiljan lega þar sem þú ert að stinga í gegnum tvö göt
+			sem eru bæði með þykktina sem parameter. Eftir að gera þrjár tilraunir með 3.7mm,3.10mm og 3mm. 3mm passaði allra best saman en þó þurfti
+			ég að nota litlu bútana úr fyrri til að gera wedge tenginguna.
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/hangiHaflidi.jpg"}
+					alt="Mynd sem sýnir hangi hönnun hanga á tölvu"
+					height={520}
+					width={800}
+				/>
+				<figcaption>Þetta hengur á tölvu.</figcaption>
+			</figure>
+			Ég var búin að mæla þykktina á skápa hurðinni heima og var með það sem parameter, vonandi passar það líka.
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/hangiheima.jpg"}
+					alt="Mynd sem sýnir hangi hönnun hanga á tölvu"
+					height={520}
+					width={800}
+				/>
+				<figcaption>Hangir á hurð með herðatré.</figcaption>
+			</figure>
+			Þetta virkar en langi hlutinn sem hengur út fremst er hálf ónothæfur best væri að snúa flippanum sem er nær til að hengja á.
+			Það sem er lengra frá er svo langt frá hurðinni að það myndar svo mikið vægi að það heldur engu uppi.
+			Svona gerist þegar maður hannar fyrir fjölda tenginga en ekki út frá notkunar gildi. You life and you learn.
+			<a href="https://www.thingiverse.com/thing:6541066">Sækja model frá thingiverse</a>
+			<h2>Kerf mælingarnar</h2>
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/kerfb.jpg"}
+					alt="Mynd 1 af kerfmælingum"
+					height={520}
+					width={800}
+				/>
+				<Image
+					src={"/vel608g/kerfbb.jpg"}
+					alt="Mynd 2 af kerfmælingum"
+					height={520}
+					width={800}
+				/>
+				<Image
+					src={"/vel608g/kerfbbb.jpg"}
+					alt="Mynd 3 af kerfmælingum"
+					height={520}
+					width={800}
+				/>
+				<figcaption>Kerfmælingar</figcaption>
+			</figure>
+			Til að finna kerfið sem er í raun breiddin á leisernum þurfum við að mæla muninn á gatinu og bitanu sem kemur út úr gatinu eftir skurðin.
+			það er efnið sem laserinn er að skjóta í burtu. Eftir miklar ádeilur var niðurstaðan sú að kerfið var 0.15 og notaðist ég við það í leiserskurðinum hér að ofan
+		</section >
 
 
 	</>
