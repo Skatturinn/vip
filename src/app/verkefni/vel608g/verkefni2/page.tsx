@@ -5,9 +5,9 @@ import styles from "/src/app/verkefni/verkefni.module.scss"
 export default function Page() {
 	return <>
 		<p>VÉL608G</p>
-		Sæll hafliði ef þú sérð þetta, þá er síðan ennþá í vinnslu, mátt endilega ýta á eftir mér, fer í þetta við næsta tækifæri
+		Þessi síða inniheldur efni um verkefni 2 í tölvustuddriframleiðslu
+		<h1>Verkefni 2</h1>
 		<section className={styles.sec}>
-			<h1>Verkefni 2</h1>
 			<h2>Vinylskurður</h2>
 			<p>Að skera út límmiða með Roland GS-24 reyndist lítið sem ekkert mál undir handleiðslu Hafliða.
 				Að sækja .svg mynd af github repo fyrir þessa síðu vibba henni á USB-kubb, 256gb og alles. Svo er bara að stinga honum inn.
@@ -20,6 +20,7 @@ export default function Page() {
 					height={520}
 					width={320}
 				/>
+				<figcaption>elli.vip logo</figcaption>
 			</figure>
 			<p>Að vera með límmiða á fartölvunni sinni getur gefið lífinu lit. Of mikið er þó afar ósmekklegt. Einnig vill
 				maður ekki líma hvað sem er aftaná. Marga límmiðina á ég heima oní skúffu og þó er ég efins um að líma þá á
@@ -33,7 +34,10 @@ export default function Page() {
 					height={520}
 					width={800}
 				/>
+				<figcaption>Límmiðar komnir á fartölvuna.</figcaption>
 			</figure>
+		</section>
+		<section className={styles.sec}>
 			<h2>Parametrísk hönnun fyrir pressfit</h2>
 			Verkefnið felst í því að hanna þrívíðan hlut sem á að vera settur saman með pressfit tengingum. Á að minnstakosti þrem
 			stöðum og helst með þrem mismunandi gerðum af tengingum. Hönnunin þarf að vera parametrískt því þykkt plötu sem á að notast
@@ -74,7 +78,7 @@ export default function Page() {
 				<figcaption><a href="https://www.youtube.com/watch?v=yhHhSVoL1RQ&t=2s">Notkun á parametrum í teikningum.</a></figcaption>
 			</figure>
 			Ég passaði að hafa allar lengdir byggðar á parametrum. Til að fá svo DXF úr fusion með tilliti til kerfsins sem
-			ég fann notaðist ég við <a href="https://www.youtube.com/watch?v=D1Btaqhog9E">myndband frá fablab akureyri</a>
+			ég fann notaðist ég við <a href="https://www.youtube.com/watch?v=D1Btaqhog9E">myndband</a> frá fablab akureyri.
 			<figure className={styles.synidmi}>
 				<Image
 					src={"/vel608g/lasercut.png"}
@@ -124,6 +128,8 @@ export default function Page() {
 			Það sem er lengra frá er svo langt frá hurðinni að það myndar svo mikið vægi að það heldur engu uppi.
 			Svona gerist þegar maður hannar fyrir fjölda tenginga en ekki út frá notkunar gildi. You life and you learn.
 			<a href="https://www.thingiverse.com/thing:6541066">Sækja model frá thingiverse</a>
+		</section>
+		<section className={styles.sec}>
 			<h2>Kerf mælingarnar</h2>
 			<figure className={styles.synidmi}>
 				<Image
@@ -135,7 +141,10 @@ export default function Page() {
 				<figcaption>Kerfmælingar</figcaption>
 			</figure>
 			Til að finna kerfið sem er í raun breiddin á leisernum þurfum við að mæla muninn á gatinu og bitanu sem kemur út úr gatinu eftir skurðin.
-			það er efnið sem laserinn er að skjóta í burtu. Eftir miklar ádeilur var niðurstaðan sú að kerfið var 0.15 og notaðist ég við það í leiserskurðinum hér að ofan
+			það er efnið sem laserinn er að skjóta í burtu.
+			Þetta var gert með því að teikna 12 samhliða kassa í inkscape. Eftir það er heildarlengdin á gatinu mælt. Heildar lengdin á öllu kössunum samhliða.
+			Þá er mismunur lengdana deilt með og kerfið fundið.
+			Eftir miklar ádeilur var niðurstaðan sú að kerfið var 0.15 og notaðist ég við það í leiserskurðinum hér að ofan
 		</section >
 
 
