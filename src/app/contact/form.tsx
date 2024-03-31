@@ -29,12 +29,13 @@ export const ContactForm: FC = () => {
 						}
 					})
 					setWait(false)
-					if (res.status === 400) {
-						throw new Error(res.statusText)
-					} else if (res.status >= 200 && res.status < 300) {
+					if (res.status >= 200 && res.status < 300) {
 						window.alert('Skilaboð mótekin')
 						window.history.pushState({}, '', '/');
 						window.history.go();
+					} else {
+						throw new Error(res.statusText)
+
 					}
 
 				} catch (err) {
@@ -72,6 +73,6 @@ export const ContactForm: FC = () => {
 					{...register('message', { required: true })}
 				></textarea>
 			</div>
-			<button className={register('email') ? styles.button : ''}>Senda</button>
+			<button className={styles.button}>Senda</button>
 		</form></>
 }

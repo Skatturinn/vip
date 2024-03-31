@@ -2,9 +2,11 @@ import { type NextRequest, NextResponse } from 'next/server';
 import Mail from 'nodemailer/lib/mailer';
 import nodemailer from 'nodemailer';
 import validate from 'deep-email-validator'
+import { messagevalidationmiddleware } from '@/app/util/validation';
 
 export async function POST(req: NextRequest) {
-	const { a } = await req.json()
+	let { a } = await req.json()
+	a = messagevalidationmiddleware(a.name, a.email, a.message)
 	const err = await validate({ email: a.email, validateTypo: false, validateDisposable: true, validateSMTP: false })
 	if (err.valid) {
 		const transport = nodemailer.createTransport({

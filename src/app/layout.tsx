@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="is">
-			<body className={`${poppins.className} ${styles.lgrid}`}>
+			<body className={poppins.className}>
 				<a href="#efni" className="sr-only">Elías Lúðvíksson, Beint í efnið.</a>
 				<NavBar />
 				<main id="efni">{children}</main>

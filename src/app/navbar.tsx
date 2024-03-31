@@ -65,7 +65,6 @@ export function NavBar() {
 		setNavButton(false);
 		return NavButton
 	}
-
 	const pathname = usePathname();
 	const isCurrent = (href: string): string => {
 		return pathname.split('/').map(el => '/' + el).includes(href) ? "active" : ""
