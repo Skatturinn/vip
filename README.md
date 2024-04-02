@@ -41,7 +41,7 @@ Efst á síðunni er leiðarvísir sem inniheldur hlekki á alla hluta síðunar
 
 Fyrir neðan leiðarvísirinn og sjálfsmyndina er valmynd. Hún inniheldur hlekki á undirsíður sem innihalda efni. Hver valmöguleiki er byrtur sem spil. Spilin vor hönnuð í figma. Þar er hægt að setja upp grunn að bakgrunni spilsins og afrita það síðan. Þá er bara að breyta myndum og teksta hvers spils. Reynt var að hafa vigra myndir að mestu fyrir alla upplausnir. Bakgrunnir spilana er ekki skær hvítur til að gera þau raunverulegri þar sem erfitt er að framleiða jafn skær björt spil og hvítt ljós af skjá. [Aura print](https://aura-print.com/usa/blog/post/playing-card-dimensions#:~:text=of%20playing%20cards.-,The%20dimensions%20of%20a%20standard%20playing,2.5%20inches%20x%203.5%20inches.) gefur að hefðbundinn spil séu 3.5 tommur á hæð og 2.5 tommur á breidd. Hlutföllinn eru þá 2.5/3.5 sem helst þótt við breytum yfir í cm eða pixla. Þá setjum við hæðina sem 350 og breiddina sem 250 í figma. Horninn eru gerð eftir auga miðað við spil og eru aðeins ýkt til að gefa rétt form. Þau hafa radíusinn 12.4.
 
-![Mynd af figma skjali fyrir spil](\public\myndir\figma-spil-mynd.png)
+![Mynd af figma skjali fyrir spil](/public/myndir/figma-spil-mynd.png)
 [Figma skjal fyrir hönnun á spilum](https://www.figma.com/file/cmUoEh2w8H0Oie1ldCrkD5/spil?type=design&node-id=0%3A1&mode=design&t=aQVhMLMXtYacvOeF-1)
 
 Fyrsta spilið var ásin sem vísar á umfjöllun um hönnun og útfærslu síðunar. Þar er einnig hægt að nálgast skjöl síðunar á github. Þaðan kom hugmyndin til að nota merki github síðunar fyrir spilið.
