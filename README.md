@@ -371,6 +371,35 @@ Leiðarvísir efst er ábótavant, á minni skjáum þegar maður skrollar niðu
 
 Síðan á eftir að innhalda meira efni í framtíðinni og skalanleika spurningar verða leystar þegar að þeim kemur.
 
+# Hvað var erfitt
+Í forminu er loading state þar sem overlay á að fyllaskjáin og stöðva alla virkni að koma því fyrir í scss var meira braskið en tókst að lokum. Að miðlægja tekstann og taka yfir allt. Maður mundi halda að þetta væri bara z index og position fixed með 100vw og 100vh sem virkar en til að gera tekstann og miðlægja hann svo í scss var meira málið
+
+```
+.loading {
+	height: 100vh;
+	width: 100vw;
+	z-index: 10000;
+	position: fixed;
+	cursor: wait;
+	margin: -125px;
+	background: -webkit-linear-gradient($bccolor, transparent);
+
+	&::before {
+		content: 'Reyni að senda';
+		animation-name: loading;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 3rem;
+		font-weight: 400;
+	}
+}
+```
+Átta sig á app router og hvernig maður setur upp Api. Skrýtið að hafa api möppu með möppum með routes sem hafa svo föll með nöfnum fyrir mismunandi gerðir að beiðnum.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
