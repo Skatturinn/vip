@@ -10,10 +10,10 @@ export default function Paths({ files, image }: { files: Array<string | null>, i
 	const isCurrent = (href: string): boolean => {
 		return pathname.split('/').includes(href) ? true : false
 	}
-	let p = files.filter(e => e)
-	p = typeof p[0] === 'string' && p[0].includes('\\') ?
-		p.map(stak => stak?.split('\\')) :
-		p.map(stak => stak?.split('/'));
+	let p = files.filter(e => e).map(stak => stak?.split('/'))
+	// p = typeof p[0] === 'string' && p[0].includes('\\') ?
+	// 	p.map(stak => stak?.split('\\')) :
+	// 	p.map(stak => stak?.split('/'));
 	const active = p.map(stak => stak && isCurrent(stak[4]))
 	const stada = active.some(stak => stak)
 	return <nav className={styles.nav}>
