@@ -13,12 +13,12 @@ export default function Paths({ files, image }: { files: Array<string | null>, i
 	const p = files.filter(e => e).map(stak => stak?.split('\\'))
 	const active = p.map(stak => stak && isCurrent(stak[4]))
 	const stada = active.some(stak => stak)
-	console.log(image)
 	return <nav className={styles.nav}>
 		<ol className={styles.ol}>
 			{p.map(
 				(stak, nr) => {
 					const href = stak && stak.splice(stada ? -1 : -2).join('/')
+					console.log(href)
 					return (href &&
 						<li key={nr} className={active[nr] ? styles.active : ""}>
 							<Link href={href}>
