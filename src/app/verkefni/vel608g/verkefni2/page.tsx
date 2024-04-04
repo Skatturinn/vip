@@ -4,9 +4,9 @@ import styles from "/src/app/verkefni/verkefni.module.scss"
 
 export default function Page() {
 	return <>
-		<p>VÉL608G</p>
-		Þessi síða inniheldur efni um verkefni 2 í tölvustuddriframleiðslu
 		<h1>Verkefni 2</h1>
+		<p>Þessi síða inniheldur efni um verkefni 2 í tölvustuddriframleiðslu</p>
+		<p>VÉL608G</p>
 		<section className={styles.sec}>
 			<h2>Vinylskurður</h2>
 			<p>Að skera út límmiða með Roland GS-24 reyndist lítið sem ekkert mál undir handleiðslu Hafliða.

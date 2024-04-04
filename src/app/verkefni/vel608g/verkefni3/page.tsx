@@ -4,9 +4,9 @@ import styles from "/src/app/verkefni/verkefni.module.scss"
 
 export default function Page() {
 	return <>
-		<p>VÉL608G</p>
-		Þessi síða inniheldur upplýsingar um afköst í verkefni 3 fyrir tölvustuddaframleiðslu
 		<h1>Verkefni 3</h1>
+		<p>Þessi síða inniheldur upplýsingar um afköst í verkefni 3 fyrir tölvustuddaframleiðslu</p>
+		<p>VÉL608G</p>
 		<section className={styles.sec}>
 			<h2>Hönunn á modeli fyrir 3d prentun</h2>
 			Takmarkanir geisla skurð eru að hann getur í raun bara skorið í x og y mis djúpar línur í z.
