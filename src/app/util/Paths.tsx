@@ -10,7 +10,7 @@ export default function Paths({ files, image }: { files: Array<string | null>, i
 	const isCurrent = (href: string): boolean => {
 		return pathname.split('/').includes(href) ? true : false
 	}
-	const p = typeof files[0]?.includes('//') ?
+	const p = typeof files.some(stak => stak?.includes('\\')) ?
 		files.filter(e => e).map(stak => stak?.split('\\')) :
 		files.filter(e => e).map(stak => stak?.split('/'));
 	const active = p.map(stak => stak && isCurrent(stak[4]))
