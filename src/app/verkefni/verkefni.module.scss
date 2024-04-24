@@ -45,6 +45,24 @@
 	p {
 		text-align: justify
 	}
+
+	table {
+		margin: 0 auto;
+		justify-self: center;
+
+		tr {
+
+			th,
+			td {
+				border: 1px white solid;
+				padding: 0.25em;
+				margin: 0;
+
+			}
+		}
+
+
+	}
 }
 
 .efnislit {
