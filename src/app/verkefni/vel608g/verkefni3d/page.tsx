@@ -49,11 +49,6 @@ export default function Page() {
 				á hausunum.
 			</p>
 			<h2>3D prentun</h2>
-			<p>Þar sem hausarnir eru flatir og fremur stöðugir þarf ekki mikið af supports. Þó er gatið holt og höfum
-				við supports þar inni. Prusaslicer tekur við stl fileum frá fusion sem ég raðaði í ferhyrning. Því
-				næst er að setja infyllið. Ég hélt mig bara við 15% þar sem þeir eru nægilega þykkir til að brotna ekki
-				og kostur að hafa þá léttari en þyngri þar sem þeir verða festir við lyklakippu. Prentið tók um einn og hálfan tíma
-			</p>
 			<figure className={styles.synidmi}>
 				<Image
 					src={"/vel608g/prusa.png"}
@@ -62,6 +57,20 @@ export default function Page() {
 					width={800}
 				/>
 				<figcaption>Undirbúningur fyrir 3d prentun í prusa.</figcaption>
+			</figure>
+			<p>Þar sem hausarnir eru flatir og fremur stöðugir þarf ekki mikið af supports. Þó er gatið holt og höfum
+				við supports þar inni. Prusaslicer tekur við stl fileum frá fusion sem ég raðaði í ferhyrning. Því
+				næst er að setja infyllið. Ég hélt mig bara við 15% þar sem þeir eru nægilega þykkir til að brotna ekki
+				og kostur að hafa þá léttari en þyngri þar sem þeir verða festir við lyklakippu. Prentið tók um einn og hálfan tíma
+			</p>
+			<figure className={styles.synidmi}>
+				<Image
+					src={"/vel608g/v4loka.jpg"}
+					alt="Mynd sem sýnir hausana 3dprentaða."
+					height={520}
+					width={800}
+				/>
+				<figcaption>Útkoman.</figcaption>
 			</figure>
 		</section>
 
