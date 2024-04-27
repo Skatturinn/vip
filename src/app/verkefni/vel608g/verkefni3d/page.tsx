@@ -81,12 +81,14 @@ export default function Page() {
 					<th>Skölun</th>
 					<th>Gat fyrir lyklakippu</th>
 					<th>3D prentun</th>
+					<th>Uppfæravefsíðu</th>
 				</tr>
 				<tr>
-					<th>Tími:</th>
-					<td>4klst</td>
-					<td>30mín</td>
-					<td>90mín</td>
+					<th>Tími í mínútum:</th>
+					<td>240</td>
+					<td>30</td>
+					<td>90</td>
+					<td>120</td>
 				</tr>
 			</table>
 		</section>
