@@ -146,7 +146,27 @@ export default function Page() {
 			Þá er mismunur lengdana deilt með og kerfið fundið.
 			Eftir miklar ádeilur var niðurstaðan sú að kerfið var 0.15 og notaðist ég við það í leiserskurðinum hér að ofan
 		</section >
-
-
+		<section className={styles.sec}>
+			<table>
+				<tr>
+					<th>Verkþættir</th>
+					<th>Kerf mælingar</th>
+					<th>Vinylskurður</th>
+					<th>Læra um pressfit</th>
+					<th>Parametrísk hönnun</th>
+					<th>Laserskurður og samsettning</th>
+					<th>Heild</th>
+				</tr>
+				<tr>
+					<th>Tími í mínútum:</th>
+					<td>120</td>
+					<td>60</td>
+					<td>30</td>
+					<td>180</td>
+					<td>120</td>
+					<td>{120 + 60 + 30 + 180 + 120}</td>
+				</tr>
+			</table>
+		</section>
 	</>
 }
