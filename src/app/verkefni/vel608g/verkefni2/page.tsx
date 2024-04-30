@@ -156,6 +156,7 @@ export default function Page() {
 					<th>Parametrísk hönnun</th>
 					<th>Laserskurður og samsettning</th>
 					<th>Heild</th>
+					<th>Vefsíða</th>
 				</tr>
 				<tr>
 					<th>Tími í mínútum:</th>
@@ -164,7 +165,8 @@ export default function Page() {
 					<td>30</td>
 					<td>180</td>
 					<td>120</td>
-					<td>{120 + 60 + 30 + 180 + 120}</td>
+					<td>90</td>
+					<td>{120 + 60 + 30 + 180 + 120 + 90}</td>
 				</tr>
 			</table>
 		</section>
