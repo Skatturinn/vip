@@ -155,8 +155,8 @@ export default function Page() {
 					<th>Læra um pressfit</th>
 					<th>Parametrísk hönnun</th>
 					<th>Laserskurður og samsettning</th>
-					<th>Heild</th>
 					<th>Vefsíða</th>
+					<th>Heild</th>
 				</tr>
 				<tr>
 					<th>Tími í mínútum:</th>
