@@ -19,10 +19,6 @@ export default function Page() {
 				Ég var ábyrgur fyrir taflmanna hausunum sem áttu að passa inn í borðið.
 				Þegar Sveinn var búin að fræsa það út sendi hann á mig hver breiddinn á þeim ætti að vera til að þeir mundu passa í festinguna.
 			</p>
-			<p>
-				Ég var ábyrgur fyrir taflmanna hausunum sem áttu að passa inn í borðið.
-				Þegar Sveinn var búin að fræsa það út sendi hann á mig hver breiddinn á þeim ætti að vera til að þeir mundu passa í festinguna.
-			</p>
 			<h2>Skölun</h2>
 			<p>
 				Ég byrjaði á að reyna að gera tafl hausa teikningarnar parametrískt tengdar breidd og lengd á umgjarðarinar og festingarinar.
