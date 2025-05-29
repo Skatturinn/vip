@@ -27,7 +27,6 @@ export async function POST(req: NextRequest) {
 				pass: process.env.MY_PASSWORD,
 			},
 		});
-
 		const mailOptions: Mail.Options = {
 			from: process.env.MY_EMAIL,
 			to: process.env.TO_EMAIL,
