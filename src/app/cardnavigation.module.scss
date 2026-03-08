@@ -68,20 +68,33 @@ $ivory: #f6f7ebff;
 		z-index: 100;
 	}
 
-	&:has(.card:hover) .card:not(:hover),
-	&:has(.card:active) .card:not(:active),
-	&:has(.card:focus) .card:not(:focus) {
-		a {
-			.framhlid {
-				scale: 0 1;
-				transition: scale 0.25s;
-			}
+	// &:has(.card:hover) .card:not(:hover),
+	// &:has(.card:active) .card:not(:active),
+	// &:has(.card:focus) .card:not(:focus) {
+	// 	a {
+	// 		.framhlid {
+	// 			scale: 0 1;
+	// 			transition: scale 0.25s;
+	// 		}
 
-			.bakhlid {
-				scale: 1;
-				transition: scale 0.5s ease-out;
-				transition-delay: 0.25s;
-			}
+	// 		.bakhlid {
+	// 			scale: 1;
+	// 			transition: scale 0.5s ease-out;
+	// 			transition-delay: 0.25s;
+	// 		}
+	// 	}
+	// }
+
+	.unselected {
+		.framhlid {
+			scale: 0 1;
+			transition: scale 0.25s;
+		}
+
+		.bakhlid {
+			scale: 1;
+			transition: scale 0.5s ease-out;
+			transition-delay: 0.25s;
 		}
 	}
 
